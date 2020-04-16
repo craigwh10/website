@@ -161,6 +161,21 @@ const Layout = ({
 
 /***/ }),
 
+/***/ "./components/Navbar/Navbar.module.scss":
+/*!**********************************************!*\
+  !*** ./components/Navbar/Navbar.module.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"NavLink": "Navbar_NavLink__1fKBz",
+	"heroHeader": "Navbar_heroHeader__1dOWd"
+};
+
+/***/ }),
+
 /***/ "./components/Navbar/Navbar.tsx":
 /*!**************************************!*\
   !*** ./components/Navbar/Navbar.tsx ***!
@@ -174,7 +189,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Navlinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navlinks */ "./components/Navbar/Navlinks.tsx");
+/* harmony import */ var _Navigationlinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navigationlinks */ "./components/Navbar/Navigationlinks.tsx");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../constants */ "./constants.ts");
+/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Navbar.module.scss */ "./components/Navbar/Navbar.module.scss");
+/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navbar.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Bootstrap
@@ -182,32 +200,42 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  //
 
 
+ //
+
+
 
 const Navbar = () => {
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-    fluid: true,
+  return __jsx("div", {
+    className: _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default.a.heroHeader,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 12,
       columnNumber: 5
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 7
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 7
+      lineNumber: 14,
+      columnNumber: 9
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: 4,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 9
+      lineNumber: 15,
+      columnNumber: 11
     }
-  }, "p"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  }, "Logo"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
       span: 4,
       offset: 4
@@ -215,27 +243,28 @@ const Navbar = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 9
+      lineNumber: 16,
+      columnNumber: 11
     }
-  }, __jsx(_Navlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    links: _constants__WEBPACK_IMPORTED_MODULE_3__["links"],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 11
+      lineNumber: 17,
+      columnNumber: 13
     }
-  }))));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
 
-/***/ "./components/Navbar/Navlinks.tsx":
-/*!****************************************!*\
-  !*** ./components/Navbar/Navlinks.tsx ***!
-  \****************************************/
+/***/ "./components/Navbar/Navigationlinks.tsx":
+/*!***********************************************!*\
+  !*** ./components/Navbar/Navigationlinks.tsx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -245,32 +274,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navlinks.tsx";
+/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar.module.scss */ "./components/Navbar/Navbar.module.scss");
+/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navigationlinks.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  //
 
+ //
+
+//
 
 
-const Navlinks = () => {
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 5
-    }
-  }, __jsx("a", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 7
-    }
-  }, "Hi"));
-};
+const NavigationLinks = ({
+  links
+}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14,
+    columnNumber: 3
+  }
+}, links.map(item => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: item.link,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16,
+    columnNumber: 7
+  }
+}, __jsx("a", {
+  className: _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.NavLink,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17,
+    columnNumber: 9
+  }
+}, item.content))));
 
-/* harmony default export */ __webpack_exports__["default"] = (Navlinks);
+/* harmony default export */ __webpack_exports__["default"] = (NavigationLinks);
+
+/***/ }),
+
+/***/ "./constants.ts":
+/*!**********************!*\
+  !*** ./constants.ts ***!
+  \**********************/
+/*! exports provided: links */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "links", function() { return links; });
+const links = [{
+  link: "hi.com",
+  content: "Projects"
+}, {
+  link: "hi.com",
+  content: "Blog"
+}];
 
 /***/ }),
 
