@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -115,6 +115,20 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 
 /***/ }),
 
+/***/ "./components/ProjectGenerator/GitProject.module.scss":
+/*!************************************************************!*\
+  !*** ./components/ProjectGenerator/GitProject.module.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"GitProject": "GitProject_GitProject__1hDd6"
+};
+
+/***/ }),
+
 /***/ "./components/ProjectGenerator/GitProject.tsx":
 /*!****************************************************!*\
   !*** ./components/ProjectGenerator/GitProject.tsx ***!
@@ -130,8 +144,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _GitProject_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GitProject.module.scss */ "./components/ProjectGenerator/GitProject.module.scss");
+/* harmony import */ var _GitProject_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_GitProject_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/ProjectGenerator/GitProject.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -141,34 +158,35 @@ const GitProject = ({
   url,
   language
 }) => {
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: 4,
+    className: _GitProject_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.GitProject,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 5
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: url,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 5
+      lineNumber: 16,
+      columnNumber: 7
     }
   }, __jsx("a", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 7
-    }
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: 4,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 17,
       columnNumber: 9
     }
   }, __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 18,
       columnNumber: 11
     }
   }, name), language)));
@@ -1972,6 +1990,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_ProjectGenerator_ProjectGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ProjectGenerator/ProjectGenerator */ "./components/ProjectGenerator/ProjectGenerator.tsx");
+/* harmony import */ var _styles_index_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/index.module.scss */ "./styles/index.module.scss");
+/* harmony import */ var _styles_index_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_index_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1979,29 +1999,54 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  //
 
+
+
 const IndexPage = () => {
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
       columnNumber: 5
     }
-  }, __jsx(_components_ProjectGenerator_ProjectGenerator__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    className: "flex-row flex-nowrap " + _styles_index_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.scrollable,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
       columnNumber: 7
     }
-  }));
+  }, __jsx(_components_ProjectGenerator_ProjectGenerator__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
 
 /***/ }),
 
-/***/ 4:
+/***/ "./styles/index.module.scss":
+/*!**********************************!*\
+  !*** ./styles/index.module.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"scrollable": "styles_scrollable__2wafj"
+};
+
+/***/ }),
+
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

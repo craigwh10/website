@@ -147,7 +147,7 @@ const Layout = ({
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-    fluid: "lg",
+    fluid: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,

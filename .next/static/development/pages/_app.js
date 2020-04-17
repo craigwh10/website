@@ -32,7 +32,7 @@ var Layout = function Layout(_ref) {
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-    fluid: "lg",
+    fluid: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,

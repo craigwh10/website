@@ -2,6 +2,8 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import Link from "next/link";
 
+import styles from "./GitProject.module.scss";
+
 export interface Props {
   name: string;
   url: string;
@@ -10,14 +12,14 @@ export interface Props {
 
 const GitProject: React.SFC<Props> = ({ name, url, language }) => {
   return (
-    <Link href={url}>
-      <a>
-        <Col md={4}>
+    <Col md={4} className={styles.GitProject}>
+      <Link href={url}>
+        <a>
           <p>{name}</p>
           {language}
-        </Col>
-      </a>
-    </Link>
+        </a>
+      </Link>
+    </Col>
   );
 };
 

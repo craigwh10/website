@@ -8,7 +8,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Container fluid="lg">{children}</Container>
+      <Container fluid>{children}</Container>
     </>
   );
 };
