@@ -12,8 +12,8 @@ const Navbar: React.FC = () => {
     <div className={styles.heroHeader}>
       <Container>
         <Row>
-          <Col md={4}>Logo</Col>
-          <Col md={{ span: 4, offset: 4 }}>
+          <Col md={3}>Logo</Col>
+          <Col md={{ span: 2, offset: 7 }}>
             <Navlinks links={links} />
           </Col>
         </Row>

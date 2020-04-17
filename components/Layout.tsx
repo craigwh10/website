@@ -3,12 +3,16 @@ import Link from "next/link";
 import { Container } from "react-bootstrap";
 //Components
 import Navbar from "./Navbar/Navbar";
+//
+import styles from "../styles/themes.module.scss";
 
 const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Container fluid>{children}</Container>
+      <Container fluid className={styles.theme}>
+        {children}
+      </Container>
     </>
   );
 };

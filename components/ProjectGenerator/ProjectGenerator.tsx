@@ -12,12 +12,13 @@ const ProjectGenerator: React.SFC = () => {
   return (
     <React.Fragment>
       {gitRepos &&
-        gitRepos.data.map((item) => {
+        gitRepos.data.map((item, index) => {
           return (
             <GitProject
               name={item.name}
               url={item.html_url}
               language={item.language}
+              key={index}
             />
           );
         })}

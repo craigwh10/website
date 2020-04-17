@@ -2,9 +2,12 @@
 
 a.NavLink {
   padding-right: 1rem;
-  color: white;
+  color: black;
 }
 
 .heroHeader {
-  background: $orange;
+  z-index: 2;
+  position: relative;
+  background: #dedede;
+  padding-top: 1rem;
 }
