@@ -228,8 +228,9 @@ var NavigationLinks = function NavigationLinks(_ref) {
       lineNumber: 14,
       columnNumber: 3
     }
-  }, links.map(function (item) {
+  }, links.map(function (item, index) {
     return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      key: index,
       href: item.link,
       __self: _this,
       __source: {

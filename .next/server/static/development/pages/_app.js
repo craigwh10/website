@@ -294,7 +294,8 @@ const NavigationLinks = ({
     lineNumber: 14,
     columnNumber: 3
   }
-}, links.map(item => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+}, links.map((item, index) => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  key: index,
   href: item.link,
   __self: undefined,
   __source: {
