@@ -5,3 +5,18 @@
 .metrics {
   align-items: flex-end;
 }
+
+@media (max-width: 1200px) {
+  .metrics {
+    -webkit-flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+}

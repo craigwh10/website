@@ -27,6 +27,19 @@
   padding: 0.1rem 0rem;
 }
 
+@media (max-width: 560px) {
+  .gitMetric span {
+    font-size: 0.75rem;
+  }
+  .metricName {
+    font-size: 0.75rem;
+    width: 10rem;
+  }
+  .gitMetric {
+    flex: 0 0 auto;
+  }
+}
+
 @for $i from 0 through 100 {
   .height-#{$i} {
     height: #{$i + 2.5}rem;
