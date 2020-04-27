@@ -1,5 +1,53 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
 
+/***/ "./components/Footer/Footer.tsx":
+/*!**************************************!*\
+  !*** ./components/Footer/Footer.tsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined,
+    _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Footer/Footer.tsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var Footer = function Footer(props) {
+  return __jsx("footer", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "footer",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 7
+    }
+  }, __jsx("p", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }, "Footer")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
 /***/ "./components/Layout.tsx":
 /*!*******************************!*\
   !*** ./components/Layout.tsx ***!
@@ -13,8 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar/Navbar */ "./components/Navbar/Navbar.tsx");
-/* harmony import */ var _styles_themes_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/themes.module.scss */ "./styles/themes.module.scss");
-/* harmony import */ var _styles_themes_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_themes_module_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer/Footer */ "./components/Footer/Footer.tsx");
 var _this = undefined,
     _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Layout.tsx";
 
@@ -22,93 +69,61 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  //Components
 
- //
 
 
 
 var Layout = function Layout(_ref) {
   var children = _ref.children;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    dark: false
+  }),
+      theme = _useState[0],
+      setTheme = _useState[1];
+
+  var toggleTheme = function toggleTheme() {
+    setTheme({
+      dark: !theme.dark
+    });
+  };
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 21,
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     fluid: true,
-    className: _styles_themes_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.theme,
+    className: "theme main " + (theme.dark ? "theme--dark" : "theme--default"),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 24,
       columnNumber: 7
     }
-  }, children));
+  }, children), __jsx("a", {
+    onClick: toggleTheme,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 7
+    }
+  }, "Fuck"), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 7
+    }
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
-
-/***/ }),
-
-/***/ "./components/Navbar/Navbar.module.scss":
-/*!**********************************************!*\
-  !*** ./components/Navbar/Navbar.module.scss ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./Navbar.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Navbar/Navbar.module.scss");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = function(element){// These elements should always exist. If they do not,
-// this code should fail.
-var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
-// Each style tag should be placed right before our
-// anchor. By inserting before and not after, we do not
-// need to track the last inserted element.
-parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
-//
-// After styles are injected, we need to remove the
-// <style> tags that set `body { display: none; }`.
-//
-// We use `requestAnimationFrame` as a way to defer
-// this operation since there may be multiple style
-// tags.
-;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-if (true) {
-  if (!content.locals) {
-    module.hot.accept(
-      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./Navbar.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Navbar/Navbar.module.scss",
-      function () {
-        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./Navbar.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Navbar/Navbar.module.scss");
-
-        if (typeof newContent === 'string') {
-          newContent = [[module.i, newContent, '']];
-        }
-        
-        update(newContent);
-      }
-    )
-  }
-
-  module.hot.dispose(function() { 
-    update();
-  });
-}
 
 /***/ }),
 
@@ -126,8 +141,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var _Navigationlinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navigationlinks */ "./components/Navbar/Navigationlinks.tsx");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../constants */ "./constants.ts");
-/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Navbar.module.scss */ "./components/Navbar/Navbar.module.scss");
-/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _this = undefined,
     _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navbar.tsx";
 
@@ -137,40 +150,46 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  //
 
 
- //
 
 
-
-var Navbar = function Navbar() {
-  return __jsx("div", {
-    className: _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default.a.heroHeader,
+var Navbar = function Navbar(props) {
+  return __jsx("header", {
+    className: props.className,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 14,
       columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "heroHeader",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 7
+      lineNumber: 16,
+      columnNumber: 9
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 9
+      lineNumber: 17,
+      columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: 3,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 11
+      lineNumber: 18,
+      columnNumber: 13
     }
   }, "Logo"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
@@ -180,18 +199,18 @@ var Navbar = function Navbar() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 11
+      lineNumber: 19,
+      columnNumber: 13
     }
   }, __jsx(_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
     links: _constants__WEBPACK_IMPORTED_MODULE_3__["links"],
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 13
+      lineNumber: 20,
+      columnNumber: 15
     }
-  })))));
+  }))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -211,8 +230,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar.module.scss */ "./components/Navbar/Navbar.module.scss");
-/* harmony import */ var _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2__);
 var _this = undefined,
     _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navigationlinks.tsx";
 
@@ -221,16 +238,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  //
 
-//
-
-
 var NavigationLinks = function NavigationLinks(_ref) {
   var links = _ref.links;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 12,
       columnNumber: 3
     }
   }, links.map(function (item, index) {
@@ -240,15 +254,15 @@ var NavigationLinks = function NavigationLinks(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16,
+        lineNumber: 14,
         columnNumber: 7
       }
     }, __jsx("a", {
-      className: _Navbar_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.NavLink,
+      className: "NavLink",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 15,
         columnNumber: 9
       }
     }, item.content));
@@ -256,67 +270,6 @@ var NavigationLinks = function NavigationLinks(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationLinks);
-
-/***/ }),
-
-/***/ "./components/ProjectCalculator/GitLang.scss":
-/*!***************************************************!*\
-  !*** ./components/ProjectCalculator/GitLang.scss ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./GitLang.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/ProjectCalculator/GitLang.scss");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = function(element){// These elements should always exist. If they do not,
-// this code should fail.
-var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
-// Each style tag should be placed right before our
-// anchor. By inserting before and not after, we do not
-// need to track the last inserted element.
-parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
-//
-// After styles are injected, we need to remove the
-// <style> tags that set `body { display: none; }`.
-//
-// We use `requestAnimationFrame` as a way to defer
-// this operation since there may be multiple style
-// tags.
-;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-if (true) {
-  if (!content.locals) {
-    module.hot.accept(
-      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./GitLang.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/ProjectCalculator/GitLang.scss",
-      function () {
-        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./GitLang.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/ProjectCalculator/GitLang.scss");
-
-        if (typeof newContent === 'string') {
-          newContent = [[module.i, newContent, '']];
-        }
-        
-        update(newContent);
-      }
-    )
-  }
-
-  module.hot.dispose(function() { 
-    update();
-  });
-}
 
 /***/ }),
 
@@ -4206,34 +4159,16 @@ exports.push([module.i, "/*!\n * Bootstrap v4.4.1 (https://getbootstrap.com/)\n 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Navbar/Navbar.module.scss":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-3-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./components/Navbar/Navbar.module.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/app.scss":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-6-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./styles/app.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "a.Navbar_NavLink__1fKBz {\n  padding-right: 1rem;\n  color: black; }\n\n.Navbar_heroHeader__1dOWd {\n  z-index: 2;\n  position: relative;\n  background: #dedede;\n  padding-top: 1rem; }\n", "",{"version":3,"sources":["/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navbar.module.scss"],"names":[],"mappings":"AAEA;EACE,mBAAmB;EACnB,YAAY,EAAA;;AAGd;EACE,UAAU;EACV,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB,EAAA","file":"Navbar.module.scss","sourcesContent":["@import \"../../styles//colors.module.scss\";\n\na.NavLink {\n  padding-right: 1rem;\n  color: black;\n}\n\n.heroHeader {\n  z-index: 2;\n  position: relative;\n  background: #dedede;\n  padding-top: 1rem;\n}\n"]}]);
-// Exports
-exports.locals = {
-	"NavLink": "Navbar_NavLink__1fKBz",
-	"heroHeader": "Navbar_heroHeader__1dOWd"
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/ProjectCalculator/GitLang.scss":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-6-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./components/ProjectCalculator/GitLang.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
-// Module
-exports.push([module.i, ".gitMetric {\n  display: flex;\n  text-align: center;\n  flex-flow: column-reverse;\n  margin: 1.25rem 0.5rem 0rem 0.5rem;\n  font-size: 0.8rem;\n  z-index: 1;\n  color: white; }\n\n.gitMetric span {\n  background: #2b314c;\n  width: 2rem;\n  height: 2rem;\n  align-self: center;\n  font-size: 1.25rem;\n  flex: auto; }\n\n.metricName {\n  color: #2b314c;\n  background: #f7f7f7;\n  font-weight: 700;\n  font-size: 12px;\n  padding: 0.1rem 0rem; }\n\n@media (max-width: 560px) {\n  .gitMetric span {\n    font-size: 0.75rem; }\n  .metricName {\n    font-size: 0.75rem;\n    width: 10rem; }\n  .gitMetric {\n    flex: 0 0 auto; } }\n\n.height-0 {\n  height: 2.5rem; }\n\n.height-1 {\n  height: 3.5rem; }\n\n.height-2 {\n  height: 4.5rem; }\n\n.height-3 {\n  height: 5.5rem; }\n\n.height-4 {\n  height: 6.5rem; }\n\n.height-5 {\n  height: 7.5rem; }\n\n.height-6 {\n  height: 8.5rem; }\n\n.height-7 {\n  height: 9.5rem; }\n\n.height-8 {\n  height: 10.5rem; }\n\n.height-9 {\n  height: 11.5rem; }\n\n.height-10 {\n  height: 12.5rem; }\n\n.height-11 {\n  height: 13.5rem; }\n\n.height-12 {\n  height: 14.5rem; }\n\n.height-13 {\n  height: 15.5rem; }\n\n.height-14 {\n  height: 16.5rem; }\n\n.height-15 {\n  height: 17.5rem; }\n\n.height-16 {\n  height: 18.5rem; }\n\n.height-17 {\n  height: 19.5rem; }\n\n.height-18 {\n  height: 20.5rem; }\n\n.height-19 {\n  height: 21.5rem; }\n\n.height-20 {\n  height: 22.5rem; }\n\n.height-21 {\n  height: 23.5rem; }\n\n.height-22 {\n  height: 24.5rem; }\n\n.height-23 {\n  height: 25.5rem; }\n\n.height-24 {\n  height: 26.5rem; }\n\n.height-25 {\n  height: 27.5rem; }\n\n.height-26 {\n  height: 28.5rem; }\n\n.height-27 {\n  height: 29.5rem; }\n\n.height-28 {\n  height: 30.5rem; }\n\n.height-29 {\n  height: 31.5rem; }\n\n.height-30 {\n  height: 32.5rem; }\n\n.height-31 {\n  height: 33.5rem; }\n\n.height-32 {\n  height: 34.5rem; }\n\n.height-33 {\n  height: 35.5rem; }\n\n.height-34 {\n  height: 36.5rem; }\n\n.height-35 {\n  height: 37.5rem; }\n\n.height-36 {\n  height: 38.5rem; }\n\n.height-37 {\n  height: 39.5rem; }\n\n.height-38 {\n  height: 40.5rem; }\n\n.height-39 {\n  height: 41.5rem; }\n\n.height-40 {\n  height: 42.5rem; }\n\n.height-41 {\n  height: 43.5rem; }\n\n.height-42 {\n  height: 44.5rem; }\n\n.height-43 {\n  height: 45.5rem; }\n\n.height-44 {\n  height: 46.5rem; }\n\n.height-45 {\n  height: 47.5rem; }\n\n.height-46 {\n  height: 48.5rem; }\n\n.height-47 {\n  height: 49.5rem; }\n\n.height-48 {\n  height: 50.5rem; }\n\n.height-49 {\n  height: 51.5rem; }\n\n.height-50 {\n  height: 52.5rem; }\n\n.height-51 {\n  height: 53.5rem; }\n\n.height-52 {\n  height: 54.5rem; }\n\n.height-53 {\n  height: 55.5rem; }\n\n.height-54 {\n  height: 56.5rem; }\n\n.height-55 {\n  height: 57.5rem; }\n\n.height-56 {\n  height: 58.5rem; }\n\n.height-57 {\n  height: 59.5rem; }\n\n.height-58 {\n  height: 60.5rem; }\n\n.height-59 {\n  height: 61.5rem; }\n\n.height-60 {\n  height: 62.5rem; }\n\n.height-61 {\n  height: 63.5rem; }\n\n.height-62 {\n  height: 64.5rem; }\n\n.height-63 {\n  height: 65.5rem; }\n\n.height-64 {\n  height: 66.5rem; }\n\n.height-65 {\n  height: 67.5rem; }\n\n.height-66 {\n  height: 68.5rem; }\n\n.height-67 {\n  height: 69.5rem; }\n\n.height-68 {\n  height: 70.5rem; }\n\n.height-69 {\n  height: 71.5rem; }\n\n.height-70 {\n  height: 72.5rem; }\n\n.height-71 {\n  height: 73.5rem; }\n\n.height-72 {\n  height: 74.5rem; }\n\n.height-73 {\n  height: 75.5rem; }\n\n.height-74 {\n  height: 76.5rem; }\n\n.height-75 {\n  height: 77.5rem; }\n\n.height-76 {\n  height: 78.5rem; }\n\n.height-77 {\n  height: 79.5rem; }\n\n.height-78 {\n  height: 80.5rem; }\n\n.height-79 {\n  height: 81.5rem; }\n\n.height-80 {\n  height: 82.5rem; }\n\n.height-81 {\n  height: 83.5rem; }\n\n.height-82 {\n  height: 84.5rem; }\n\n.height-83 {\n  height: 85.5rem; }\n\n.height-84 {\n  height: 86.5rem; }\n\n.height-85 {\n  height: 87.5rem; }\n\n.height-86 {\n  height: 88.5rem; }\n\n.height-87 {\n  height: 89.5rem; }\n\n.height-88 {\n  height: 90.5rem; }\n\n.height-89 {\n  height: 91.5rem; }\n\n.height-90 {\n  height: 92.5rem; }\n\n.height-91 {\n  height: 93.5rem; }\n\n.height-92 {\n  height: 94.5rem; }\n\n.height-93 {\n  height: 95.5rem; }\n\n.height-94 {\n  height: 96.5rem; }\n\n.height-95 {\n  height: 97.5rem; }\n\n.height-96 {\n  height: 98.5rem; }\n\n.height-97 {\n  height: 99.5rem; }\n\n.height-98 {\n  height: 100.5rem; }\n\n.height-99 {\n  height: 101.5rem; }\n\n.height-100 {\n  height: 102.5rem; }\n", "",{"version":3,"sources":["/Users/craigwhite/Desktop/Typescript/Website/components/ProjectCalculator/GitLang.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/colors.module.scss"],"names":[],"mappings":"AAEA;EACE,aAAa;EACb,kBAAkB;EAClB,yBAAyB;EACzB,kCAAkC;EAClC,iBAAiB;EACjB,UAAU;EACV,YAAY,EAAA;;AAGd;EACE,mBCZY;EDaZ,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,kBAAkB;EAClB,UAAU,EAAA;;AAGZ;EACE,cCrBY;EDsBZ,mBAAmB;EACnB,gBAAgB;EAChB,eAAe;EACf,oBAAoB,EAAA;;AAGtB;EACE;IACE,kBAAkB,EAAA;EAEpB;IACE,kBAAkB;IAClB,YAAY,EAAA;EAEd;IACE,cAAc,EAAA,EACf;;AAID;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,cAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,eAAQ,EAAA;;AADV;EACE,gBAAQ,EAAA;;AADV;EACE,gBAAQ,EAAA;;AADV;EACE,gBAAQ,EAAA","file":"GitLang.scss","sourcesContent":["@import \"../../styles//colors.module.scss\";\n\n.gitMetric {\n  display: flex;\n  text-align: center;\n  flex-flow: column-reverse;\n  margin: 1.25rem 0.5rem 0rem 0.5rem;\n  font-size: 0.8rem;\n  z-index: 1;\n  color: white;\n}\n\n.gitMetric span {\n  background: $blue;\n  width: 2rem;\n  height: 2rem;\n  align-self: center;\n  font-size: 1.25rem;\n  flex: auto;\n}\n\n.metricName {\n  color: $blue;\n  background: #f7f7f7;\n  font-weight: 700;\n  font-size: 12px;\n  padding: 0.1rem 0rem;\n}\n\n@media (max-width: 560px) {\n  .gitMetric span {\n    font-size: 0.75rem;\n  }\n  .metricName {\n    font-size: 0.75rem;\n    width: 10rem;\n  }\n  .gitMetric {\n    flex: 0 0 auto;\n  }\n}\n\n@for $i from 0 through 100 {\n  .height-#{$i} {\n    height: #{$i + 2.5}rem;\n  }\n}\n","$orange: #f37137;\n$blue: #2b314c;\n$white: #f7f7f7;\n"]}]);
+exports.push([module.i, "a.NavLink {\n  padding-right: 1rem;\n  color: black; }\n\n.heroHeader {\n  z-index: 2;\n  position: relative;\n  padding-top: 1rem; }\n  .theme--default .heroHeader {\n    background: #579abe; }\n  .theme--dark .heroHeader {\n    background: #06223b; }\n\n.gitMetric {\n  display: flex;\n  text-align: center;\n  flex-flow: column-reverse;\n  margin: 1.25rem 0.5rem 0rem 0.5rem;\n  font-size: 0.8rem;\n  z-index: 1;\n  color: white; }\n\n.gitMetric span {\n  width: 2rem;\n  height: 2rem;\n  align-self: center;\n  font-size: 1.25rem;\n  flex: auto; }\n  .theme--default .gitMetric span {\n    background: #579abe;\n    color: #d2eeca; }\n  .theme--dark .gitMetric span {\n    background: #06223b;\n    color: #d2eeca; }\n\n@media (min-width: 950px) {\n  .metricName {\n    font-weight: 700;\n    font-size: 10px;\n    padding: 0.1rem 0rem;\n    margin: 0em -3em -2em -3em; }\n    .theme--default .metricName {\n      color: #d2eeca; }\n    .theme--dark .metricName {\n      color: #d2eeca; } }\n\n@media (max-width: 949px) {\n  .gitMetric span {\n    font-size: 0.75rem; }\n  .metricName {\n    font-size: 0.5rem;\n    width: 10rem;\n    padding: 0.1rem 1em;\n    margin: 0em -3em 0em -3em; }\n    .theme--default .metricName {\n      color: #d2eeca; }\n    .theme--dark .metricName {\n      color: #d2eeca; }\n  .gitMetric {\n    flex: 0 0 auto; } }\n\n.height-0 {\n  height: 2.5rem; }\n\n.height-1 {\n  height: 3.5rem; }\n\n.height-2 {\n  height: 4.5rem; }\n\n.height-3 {\n  height: 5.5rem; }\n\n.height-4 {\n  height: 6.5rem; }\n\n.height-5 {\n  height: 7.5rem; }\n\n.height-6 {\n  height: 8.5rem; }\n\n.height-7 {\n  height: 9.5rem; }\n\n.height-8 {\n  height: 10.5rem; }\n\n.height-9 {\n  height: 11.5rem; }\n\n.height-10 {\n  height: 12.5rem; }\n\n.height-11 {\n  height: 13.5rem; }\n\n.height-12 {\n  height: 14.5rem; }\n\n.height-13 {\n  height: 15.5rem; }\n\n.height-14 {\n  height: 16.5rem; }\n\n.height-15 {\n  height: 17.5rem; }\n\n.height-16 {\n  height: 18.5rem; }\n\n.height-17 {\n  height: 19.5rem; }\n\n.height-18 {\n  height: 20.5rem; }\n\n.height-19 {\n  height: 21.5rem; }\n\n.height-20 {\n  height: 22.5rem; }\n\n.height-21 {\n  height: 23.5rem; }\n\n.height-22 {\n  height: 24.5rem; }\n\n.height-23 {\n  height: 25.5rem; }\n\n.height-24 {\n  height: 26.5rem; }\n\n.height-25 {\n  height: 27.5rem; }\n\n.height-26 {\n  height: 28.5rem; }\n\n.height-27 {\n  height: 29.5rem; }\n\n.height-28 {\n  height: 30.5rem; }\n\n.height-29 {\n  height: 31.5rem; }\n\n.height-30 {\n  height: 32.5rem; }\n\n.height-31 {\n  height: 33.5rem; }\n\n.height-32 {\n  height: 34.5rem; }\n\n.height-33 {\n  height: 35.5rem; }\n\n.height-34 {\n  height: 36.5rem; }\n\n.height-35 {\n  height: 37.5rem; }\n\n.height-36 {\n  height: 38.5rem; }\n\n.height-37 {\n  height: 39.5rem; }\n\n.height-38 {\n  height: 40.5rem; }\n\n.height-39 {\n  height: 41.5rem; }\n\n.height-40 {\n  height: 42.5rem; }\n\n.height-41 {\n  height: 43.5rem; }\n\n.height-42 {\n  height: 44.5rem; }\n\n.height-43 {\n  height: 45.5rem; }\n\n.height-44 {\n  height: 46.5rem; }\n\n.height-45 {\n  height: 47.5rem; }\n\n.height-46 {\n  height: 48.5rem; }\n\n.height-47 {\n  height: 49.5rem; }\n\n.height-48 {\n  height: 50.5rem; }\n\n.height-49 {\n  height: 51.5rem; }\n\n.height-50 {\n  height: 52.5rem; }\n\n.height-51 {\n  height: 53.5rem; }\n\n.height-52 {\n  height: 54.5rem; }\n\n.height-53 {\n  height: 55.5rem; }\n\n.height-54 {\n  height: 56.5rem; }\n\n.height-55 {\n  height: 57.5rem; }\n\n.height-56 {\n  height: 58.5rem; }\n\n.height-57 {\n  height: 59.5rem; }\n\n.height-58 {\n  height: 60.5rem; }\n\n.height-59 {\n  height: 61.5rem; }\n\n.height-60 {\n  height: 62.5rem; }\n\n.height-61 {\n  height: 63.5rem; }\n\n.height-62 {\n  height: 64.5rem; }\n\n.height-63 {\n  height: 65.5rem; }\n\n.height-64 {\n  height: 66.5rem; }\n\n.height-65 {\n  height: 67.5rem; }\n\n.height-66 {\n  height: 68.5rem; }\n\n.height-67 {\n  height: 69.5rem; }\n\n.height-68 {\n  height: 70.5rem; }\n\n.height-69 {\n  height: 71.5rem; }\n\n.height-70 {\n  height: 72.5rem; }\n\n.height-71 {\n  height: 73.5rem; }\n\n.height-72 {\n  height: 74.5rem; }\n\n.height-73 {\n  height: 75.5rem; }\n\n.height-74 {\n  height: 76.5rem; }\n\n.height-75 {\n  height: 77.5rem; }\n\n.height-76 {\n  height: 78.5rem; }\n\n.height-77 {\n  height: 79.5rem; }\n\n.height-78 {\n  height: 80.5rem; }\n\n.height-79 {\n  height: 81.5rem; }\n\n.height-80 {\n  height: 82.5rem; }\n\n.height-81 {\n  height: 83.5rem; }\n\n.height-82 {\n  height: 84.5rem; }\n\n.height-83 {\n  height: 85.5rem; }\n\n.height-84 {\n  height: 86.5rem; }\n\n.height-85 {\n  height: 87.5rem; }\n\n.height-86 {\n  height: 88.5rem; }\n\n.height-87 {\n  height: 89.5rem; }\n\n.height-88 {\n  height: 90.5rem; }\n\n.height-89 {\n  height: 91.5rem; }\n\n.height-90 {\n  height: 92.5rem; }\n\n.height-91 {\n  height: 93.5rem; }\n\n.height-92 {\n  height: 94.5rem; }\n\n.height-93 {\n  height: 95.5rem; }\n\n.height-94 {\n  height: 96.5rem; }\n\n.height-95 {\n  height: 97.5rem; }\n\n.height-96 {\n  height: 98.5rem; }\n\n.height-97 {\n  height: 99.5rem; }\n\n.height-98 {\n  height: 100.5rem; }\n\n.height-99 {\n  height: 101.5rem; }\n\n.height-100 {\n  height: 102.5rem; }\n\n.theme--default .footer {\n  background: #579abe; }\n\n.theme--dark .footer {\n  background: #06223b; }\n\n.scrollable {\n  overflow-y: hidden; }\n\n.metrics {\n  align-items: flex-end; }\n\n@media (max-width: 1150px) {\n  .metrics {\n    flex-wrap: nowrap !important;\n    overflow-x: scroll;\n    display: flex;\n    overflow-y: hidden;\n    flex-direction: row !important; } }\n", "",{"version":3,"sources":["/Users/craigwhite/Desktop/Typescript/Website/styles/Navbar/Navbar.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/_color-themes.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/colors.module.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/ProjectCalculator/GitLang.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/Footer/Footer.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/Metrics/Metrics.scss"],"names":[],"mappings":"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","file":"app.scss","sourcesContent":["@import \"../colors.module.scss\";\n@import \"../../styles/color-themes\";\n\na.NavLink {\n  padding-right: 1rem;\n  color: black;\n}\n\n.heroHeader {\n  z-index: 2;\n  position: relative;\n  @include themed() {\n    background: t(\"primaryBackground\");\n  }\n  padding-top: 1rem;\n}\n","@import \"./colors.module.scss\";\n\n$themes: (\n  default: (\n    primaryBackground: $mainblue,\n    secondaryBackground: $backgrounddefault,\n    textColor: $defaultfontcolor,\n    buttonTextColor: #408bbd,\n    buttonTextTransform: none,\n    buttonTextHoverColor: #61b0e7,\n    buttonColor: #fff,\n    buttonBorder: 2px solid #fff,\n  ),\n  dark: (\n    primaryBackground: $backgrounddark,\n    secondaryBackground: #444,\n    textColor: #d2eeca,\n    buttonTextColor: #aaa,\n    buttonTextTransform: uppercase,\n    buttonTextHoverColor: #ddd,\n    buttonColor: #333,\n    buttonBorder: 1px solid #aaa,\n  ),\n);\n\n@mixin themed() {\n  @each $theme, $map in $themes {\n    .theme--#{$theme} & {\n      $theme-map: () !global;\n      @each $key, $submap in $map {\n        $value: map-get(map-get($themes, $theme), \"#{$key}\");\n        $theme-map: map-merge(\n          $theme-map,\n          (\n            $key: $value,\n          )\n        ) !global;\n      }\n      @content;\n      $theme-map: null !global;\n    }\n  }\n}\n\n@function t($key) {\n  @return map-get($theme-map, $key);\n}\n","$orange: #f37137;\n$blue: #2b314c;\n$white: #f7f7f7;\n\n//Global Favourite Colours\n\n$oxfordblue: #06223b;\n$charcoal: #233d4d;\n$smokyblack: #0c0f0a;\n$saffronyellow: #eac435;\n$sunrisered: #e63c36;\n$sunriseorange: #fbb17d;\n\n// Theme Colours\n\n$mainblue: #579abe;\n$mainred: #c23b23;\n$mainyellow: #eada52;\n$maingreen: #03c03c;\n$mainpurple: #976ed7;\n$mainorange: #f39a27;\n\n//DEFAULT\n$backgrounddefault: #06223b;\n$defaultfontcolor: #d2eeca;\n\n//DARK\n$backgrounddark: #06223b;\n\n$projectColor: red;\n","@import \"../colors.module.scss\";\n@import \"../../styles/color-themes\";\n\n.gitMetric {\n  display: flex;\n  text-align: center;\n  flex-flow: column-reverse;\n  margin: 1.25rem 0.5rem 0rem 0.5rem;\n  font-size: 0.8rem;\n  z-index: 1;\n  color: white;\n}\n\n.gitMetric span {\n  @include themed() {\n    background: t(\"primaryBackground\");\n    color: t(\"textColor\");\n  }\n  width: 2rem;\n  height: 2rem;\n  align-self: center;\n  font-size: 1.25rem;\n  flex: auto;\n}\n@media (min-width: 950px) {\n  .metricName {\n    @include themed() {\n      color: t(\"textColor\");\n    }\n    font-weight: 700;\n    font-size: 10px;\n    padding: 0.1rem 0rem;\n    margin: 0em -3em -2em -3em;\n  }\n}\n\n@media (max-width: 949px) {\n  .gitMetric span {\n    font-size: 0.75rem;\n  }\n  .metricName {\n    font-size: 0.5rem;\n    width: 10rem;\n    padding: 0.1rem 1em;\n    @include themed() {\n      color: t(\"textColor\");\n    }\n    margin: 0em -3em 0em -3em;\n  }\n  .gitMetric {\n    flex: 0 0 auto;\n  }\n}\n\n@for $i from 0 through 100 {\n  .height-#{$i} {\n    height: #{$i + 2.5}rem;\n  }\n}\n",".footer {\n  @include themed() {\n    background: t(\"primaryBackground\");\n  }\n}\n",".scrollable {\n  overflow-y: hidden;\n}\n\n.metrics {\n  align-items: flex-end;\n  @include themed() {\n    background: t(\"gradientBackground\");\n  }\n}\n\n@media (max-width: 1150px) {\n  .metrics {\n    -webkit-flex-wrap: nowrap !important;\n    -ms-flex-wrap: nowrap !important;\n    flex-wrap: nowrap !important;\n    overflow-x: scroll;\n    display: flex;\n    overflow-y: hidden;\n    -webkit-box-orient: horizontal !important;\n    -webkit-box-direction: normal !important;\n    -webkit-flex-direction: row !important;\n    -ms-flex-direction: row !important;\n    flex-direction: row !important;\n  }\n}\n"]}]);
 
 
 /***/ }),
@@ -4247,25 +4182,8 @@ exports.push([module.i, ".gitMetric {\n  display: flex;\n  text-align: center;\n
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "body {\n  background: #f7f7f7; }\n", "",{"version":3,"sources":["/Users/craigwhite/Desktop/Typescript/Website/styles/global.scss","/Users/craigwhite/Desktop/Typescript/Website/styles/colors.module.scss"],"names":[],"mappings":"AAEA;EACE,mBCDa,EAAA","file":"global.scss","sourcesContent":["@import \"./colors.module.scss\";\n\nbody {\n  background: $white;\n}\n","$orange: #f37137;\n$blue: #2b314c;\n$white: #f7f7f7;\n"]}]);
+exports.push([module.i, "header .heroHeader {\n  min-height: 10vh; }\n\n.main {\n  min-height: 80vh; }\n\nfooter .footer {\n  min-height: 10vh; }\n\n@media only screen and (max-width: 768px) {\n  #_next {\n    width: 100%; } }\n", "",{"version":3,"sources":["/Users/craigwhite/Desktop/Typescript/Website/styles/global.scss"],"names":[],"mappings":"AAGA;EACE,gBAAgB,EAAA;;AAGlB;EACE,gBAAgB,EAAA;;AAGlB;EACE,gBAAgB,EAAA;;AAGlB;EACE;IACE,WAAW,EAAA,EACZ","file":"global.scss","sourcesContent":["@import \"./color-themes\";\n@import \"./colors.module.scss\";\n\nheader .heroHeader {\n  min-height: 10vh;\n}\n\n.main {\n  min-height: 80vh;\n}\n\nfooter .footer {\n  min-height: 10vh;\n}\n\n@media only screen and (max-width: 768px) {\n  #_next {\n    width: 100%;\n  }\n}\n"]}]);
 
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/themes.module.scss":
-/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-3-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./styles/themes.module.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
-// Module
-exports.push([module.i, ".themes_theme__3Jku4 {\n  background: #dedede; }\n", "",{"version":3,"sources":["/Users/craigwhite/Desktop/Typescript/Website/styles/themes.module.scss"],"names":[],"mappings":"AAAA;EACE,mBAAmB,EAAA","file":"themes.module.scss","sourcesContent":[".theme {\n  background: #dedede;\n}\n\n// @media (max-width: 800px) {\n//   .theme {\n//   }\n// }\n"]}]);
-// Exports
-exports.locals = {
-	"theme": "themes_theme__3Jku4"
-};
 
 /***/ }),
 
@@ -20074,22 +19992,23 @@ module.exports = warning;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _components_ProjectCalculator_GitLang_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ProjectCalculator/GitLang.scss */ "./components/ProjectCalculator/GitLang.scss");
-/* harmony import */ var _components_ProjectCalculator_GitLang_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_ProjectCalculator_GitLang_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var animate_css_animate_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animate.css/animate.css */ "./node_modules/animate.css/animate.css");
-/* harmony import */ var animate_css_animate_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(animate_css_animate_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/global.scss */ "./styles/global.scss");
-/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_global_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var animate_css_animate_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! animate.css/animate.css */ "./node_modules/animate.css/animate.css");
+/* harmony import */ var animate_css_animate_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(animate_css_animate_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/global.scss */ "./styles/global.scss");
+/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_global_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/app.scss */ "./styles/app.scss");
+/* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_app_scss__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
 
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/_app.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
+ //
 
  //
 
@@ -20104,20 +20023,81 @@ function MyApp(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 5
     }
   }, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 7
     }
   })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);
+
+/***/ }),
+
+/***/ "./styles/app.scss":
+/*!*************************!*\
+  !*** ./styles/app.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./app.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/app.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./app.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/app.scss",
+      function () {
+        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./app.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/app.scss");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
 
 /***/ }),
 
@@ -20165,67 +20145,6 @@ if (true) {
       /*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./global.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/global.scss",
       function () {
         var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./global.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/global.scss");
-
-        if (typeof newContent === 'string') {
-          newContent = [[module.i, newContent, '']];
-        }
-        
-        update(newContent);
-      }
-    )
-  }
-
-  module.hot.dispose(function() { 
-    update();
-  });
-}
-
-/***/ }),
-
-/***/ "./styles/themes.module.scss":
-/*!***********************************!*\
-  !*** ./styles/themes.module.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./themes.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/themes.module.scss");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = function(element){// These elements should always exist. If they do not,
-// this code should fail.
-var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
-// Each style tag should be placed right before our
-// anchor. By inserting before and not after, we do not
-// need to track the last inserted element.
-parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
-//
-// After styles are injected, we need to remove the
-// <style> tags that set `body { display: none; }`.
-//
-// We use `requestAnimationFrame` as a way to defer
-// this operation since there may be multiple style
-// tags.
-;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-if (true) {
-  if (!content.locals) {
-    module.hot.accept(
-      /*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./themes.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/themes.module.scss",
-      function () {
-        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./themes.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/themes.module.scss");
 
         if (typeof newContent === 'string') {
           newContent = [[module.i, newContent, '']];

@@ -1,0 +1,16 @@
+@import "../colors.module.scss";
+@import "../../styles/color-themes";
+
+a.NavLink {
+  padding-right: 1rem;
+  color: black;
+}
+
+.heroHeader {
+  z-index: 2;
+  position: relative;
+  @include themed() {
+    background: t("primaryBackground");
+  }
+  padding-top: 1rem;
+}

@@ -4,15 +4,19 @@
 
 .metrics {
   align-items: flex-end;
+  @include themed() {
+    background: t("gradientBackground");
+  }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1150px) {
   .metrics {
     -webkit-flex-wrap: nowrap !important;
     -ms-flex-wrap: nowrap !important;
     flex-wrap: nowrap !important;
     overflow-x: scroll;
     display: flex;
+    overflow-y: hidden;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
     -webkit-flex-direction: row !important;

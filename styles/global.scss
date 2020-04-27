@@ -1,5 +1,20 @@
+@import "./color-themes";
 @import "./colors.module.scss";
 
-body {
-  background: $white;
+header .heroHeader {
+  min-height: 10vh;
+}
+
+.main {
+  min-height: 80vh;
+}
+
+footer .footer {
+  min-height: 10vh;
+}
+
+@media only screen and (max-width: 768px) {
+  #_next {
+    width: 100%;
+  }
 }
