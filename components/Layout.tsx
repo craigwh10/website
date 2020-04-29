@@ -22,7 +22,6 @@ const Layout: React.FC = ({ children }) => {
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
       />
       <Container
-        fluid
         className={
           "theme main " + (theme.dark ? "theme--dark" : "theme--default")
         }

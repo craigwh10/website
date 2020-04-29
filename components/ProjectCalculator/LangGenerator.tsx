@@ -29,5 +29,3 @@ const LangGenerator: React.SFC = () => {
 };
 
 export default LangGenerator;
-
-// Just need to decypher types

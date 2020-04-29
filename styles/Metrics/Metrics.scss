@@ -3,10 +3,6 @@
 }
 
 .metrics {
-  align-items: flex-end;
-  @include themed() {
-    background: t("gradientBackground");
-  }
 }
 
 @media (max-width: 1150px) {

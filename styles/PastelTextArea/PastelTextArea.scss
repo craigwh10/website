@@ -1,0 +1,5 @@
+.pastelblue {
+  @include themed() {
+    background: t("primaryBackground");
+  }
+}

@@ -209,7 +209,6 @@ const Layout = ({
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-    fluid: true,
     className: "theme main " + (theme.dark ? "theme--dark" : "theme--default"),
     __self: undefined,
     __source: {
@@ -222,7 +221,7 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 31,
       columnNumber: 7
     }
   }, "Fuck"), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -230,7 +229,7 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 32,
       columnNumber: 7
     }
   }));

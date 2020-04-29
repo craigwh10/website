@@ -93,6 +93,64 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/PastelTextArea/PastelTextArea.tsx":
+/*!******************************************************!*\
+  !*** ./components/PastelTextArea/PastelTextArea.tsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/PastelTextArea/PastelTextArea.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const PastelTextArea = ({
+  text,
+  color
+}) => {
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    className: "pastel" + color,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 5
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 7
+    }
+  }, __jsx("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, text)), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }, "Hi"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PastelTextArea);
+
+/***/ }),
+
 /***/ "./components/ProjectCalculator/GitLang.tsx":
 /*!**************************************************!*\
   !*** ./components/ProjectCalculator/GitLang.tsx ***!
@@ -123,29 +181,28 @@ const GitLang = ({
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: "animated gitMetric fadeIn" + " height-" + ammount,
+    className: "animated gitMetric fadeIn height-" + ammount,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
       columnNumber: 7
     }
-  }, __jsx("div", {
-    className: "metricName",
+  }, __jsx("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 9
     }
-  }, language == "null" ? " Other" : language, ammount > 1 ? " Projects" : " Project"), __jsx("span", {
+  }, language == "null" ? " Other" : language), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 14,
       columnNumber: 9
     }
-  }, ammount)));
+  }, ammount), ammount > 1 ? " Projects" : " Project"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (GitLang);
@@ -218,7 +275,7 @@ const LangGenerator = () => {
   }, gitLangs && Printed);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (LangGenerator); // Just need to decypher types
+/* harmony default export */ __webpack_exports__["default"] = (LangGenerator);
 
 /***/ }),
 
@@ -282,6 +339,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_ProjectCalculator_LangGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ProjectCalculator/LangGenerator */ "./components/ProjectCalculator/LangGenerator.tsx");
+/* harmony import */ var _components_PastelTextArea_PastelTextArea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/PastelTextArea/PastelTextArea */ "./components/PastelTextArea/PastelTextArea.tsx");
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -289,23 +347,41 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  //
 
+
+
 const IndexPage = () => {
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 5
+    }
+  }, __jsx(_components_PastelTextArea_PastelTextArea__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    color: "blue",
+    text: "hello",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 7
+    }
+  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
     className: "metrics",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 5
+      lineNumber: 18,
+      columnNumber: 7
     }
   }, __jsx(_components_ProjectCalculator_LangGenerator__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 7
+      lineNumber: 19,
+      columnNumber: 9
     }
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);

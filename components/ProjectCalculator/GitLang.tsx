@@ -9,12 +9,11 @@ export interface Props {
 const GitLang: React.SFC<Props> = ({ language, ammount }) => {
   return (
     <Col>
-      <div className={"animated gitMetric fadeIn" + " height-" + ammount}>
-        <div className="metricName">
-          {language == "null" ? " Other" : language}
-          {ammount > 1 ? " Projects" : " Project"}
-        </div>
-        <span>{ammount}</span>
+      <div className={"animated gitMetric fadeIn height-" + ammount}>
+        <span>{language == "null" ? " Other" : language}</span>
+        <div>{ammount}</div>
+        {ammount > 1 ? " Projects" : " Project"}
+        {/* <div className={"bar height-" + ammount} /> */}
       </div>
     </Col>
   );
