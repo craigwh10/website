@@ -4,18 +4,28 @@
 .gitMetric {
   display: flex;
   flex-flow: column;
-  margin: 0rem -15px 0rem -15px;
-  padding-left: 15px;
   font-size: 0.8rem;
   z-index: 1;
-  color: white;
   @include themed() {
     background: t("primaryBackground");
+    color: t("importantContent");
   }
+  margin: 5rem 0em 0em 0em;
+  width: 40%;
+  text-align: center;
+}
+
+.metrics.row {
+  align-items: flex-end;
 }
 
 .gitMetric span {
   height: 2em;
+  margin-top: -1.5em;
+  @include themed() {
+    color: t("primaryBackground");
+  }
+  font-weight: 500;
 }
 @media (min-width: 950px) {
   .metricName {
@@ -52,9 +62,14 @@
   flex: auto;
 }
 
+.CentralGit {
+  align-items: center;
+  text-align: -webkit-center;
+}
+
 @for $i from 0 through 100 {
   .height-#{$i} {
-    height: #{$i * 1 + 3}em;
+    height: #{2 + $i * 1.1}em;
     @if ($i > 10) {
       .bar {
         background: $mainorange !important;

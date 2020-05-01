@@ -3,6 +3,19 @@
 }
 
 .metrics {
+  @include themed() {
+    background: t("importantContent");
+  }
+  min-height: 26vh;
+}
+
+.metricTitle {
+  text-align: center;
+  color: #fff;
+}
+
+h1.metricTitle {
+  margin-top: 2em;
 }
 
 @media (max-width: 1150px) {

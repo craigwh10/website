@@ -2,11 +2,11 @@ import * as types from "./types";
 
 export const links: types.NavLink[] = [
   {
-    link: "hi.com",
+    link: "projects",
     content: "Projects",
   },
   {
-    link: "hi.com",
+    link: "blog",
     content: "Blog",
   },
 ];

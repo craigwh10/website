@@ -9,7 +9,7 @@ const useGitProjectCalculator = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.github.com/users/Haar/repos")
+      .get(`https://api.github.com/users/${process.env.USER}/repos`)
       .then(function (response) {
         setGitLangFreq(
           response.data.reduce((acc, it) => {

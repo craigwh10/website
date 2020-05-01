@@ -11,6 +11,7 @@ a.NavLink {
   position: relative;
   @include themed() {
     background: t("primaryBackground");
+    color: t("importantContent");
   }
   padding-top: 1rem;
 }

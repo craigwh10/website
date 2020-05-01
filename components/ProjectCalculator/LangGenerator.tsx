@@ -2,6 +2,7 @@ import React from "react";
 import useGitProjectCalculator from "../../container/gitprojects/gitProjectCalculator";
 //
 import GitLang from "./GitLang";
+import { Container, Row } from "react-bootstrap";
 
 const LangGenerator: React.SFC = () => {
   const { gitLangFreq, isLoading } = useGitProjectCalculator();
@@ -25,7 +26,23 @@ const LangGenerator: React.SFC = () => {
     }
   }
 
-  return <React.Fragment>{gitLangs && Printed}</React.Fragment>;
+  let primaryLanguage =
+    gitLangFreq &&
+    Object.keys(gitLangFreq).reduce((a, b) =>
+      gitLangFreq[a] > gitLangFreq[b] ? a : b
+    );
+
+  let otherLanguages = gitLangs && gitLangs.length - 1;
+
+  return (
+    <Container>
+      <h1 className="metricTitle">{`Primarily working with ${primaryLanguage}`}</h1>
+      <h2 className="metricTitle">{`and ${otherLanguages} other languages`}</h2>
+      <Row className={"metrics"} noGutters>
+        {gitLangs && Printed}
+      </Row>
+    </Container>
+  );
 };
 
 export default LangGenerator;

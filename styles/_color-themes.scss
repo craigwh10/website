@@ -2,8 +2,12 @@
 
 $themes: (
   default: (
-    primaryBackground: $mainblue,
+    primaryBackground: #fff,
+    navBackground: #fff,
     secondaryBackground: $backgrounddefault,
+    cardBackground: $cardlight,
+    importantContent: $mainblue,
+    importantSecondary: $mainorange,
     textColor: $defaultfontcolor,
     buttonTextColor: #408bbd,
     buttonTextTransform: none,
@@ -12,8 +16,11 @@ $themes: (
     buttonBorder: 2px solid #fff,
   ),
   dark: (
-    primaryBackground: $backgrounddark,
+    primaryBackground: #323639,
     secondaryBackground: #444,
+    cardBackground: $carddark,
+    importantContent: #1c2650,
+    importantSecondary: $mainorange,
     textColor: #d2eeca,
     buttonTextColor: #aaa,
     buttonTextTransform: uppercase,

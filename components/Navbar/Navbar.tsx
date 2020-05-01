@@ -4,6 +4,8 @@ import { Row, Col, Container } from "react-bootstrap";
 //
 import Navlinks from "./Navigationlinks";
 import { links } from "../../constants";
+//
+import Link from "next/link";
 
 interface Props {
   className: string;
@@ -15,7 +17,11 @@ const Navbar: React.FC<Props> = (props) => {
       <div className={"heroHeader"}>
         <Container>
           <Row>
-            <Col md={3}>Logo</Col>
+            <Col md={3}>
+              <Link href="/">
+                <a>Logo</a>
+              </Link>
+            </Col>
             <Col md={{ span: 2, offset: 7 }}>
               <Navlinks links={links} />
             </Col>

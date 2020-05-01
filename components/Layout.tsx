@@ -4,6 +4,8 @@ import { Container } from "react-bootstrap";
 //Components
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
+//
+import Main from "../components/Main/Main";
 
 const Layout: React.FC = ({ children }) => {
   const [theme, setTheme] = useState({
@@ -21,13 +23,12 @@ const Layout: React.FC = ({ children }) => {
       <Navbar
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
       />
-      <Container
+      <Main
         className={
           "theme main " + (theme.dark ? "theme--dark" : "theme--default")
         }
-      >
-        {children}
-      </Container>
+        content={children}
+      ></Main>
       <a onClick={toggleTheme}>Fuck</a>
       <Footer
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}

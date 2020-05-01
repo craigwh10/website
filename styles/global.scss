@@ -18,3 +18,12 @@ footer .footer {
     width: 100%;
   }
 }
+
+.container-holder {
+  overflow: hidden;
+
+  @include themed() {
+    background: t("primaryBackground");
+  }
+  min-height: 46vh;
+}
