@@ -9,13 +9,14 @@ import Link from "next/link";
 
 interface Props {
   className: string;
+  darkModeToggle: () => void;
 }
 
 const Navbar: React.FC<Props> = (props) => {
   return (
     <header className={props.className}>
-      <div className={"heroHeader"}>
-        <Container>
+      <div className={"Nav"}>
+        <Container fluid>
           <Row>
             <Col md={3}>
               <Link href="/">
@@ -24,6 +25,7 @@ const Navbar: React.FC<Props> = (props) => {
             </Col>
             <Col md={{ span: 2, offset: 7 }}>
               <Navlinks links={links} />
+              <a onClick={props.darkModeToggle}>Darkmode</a>
             </Col>
           </Row>
         </Container>

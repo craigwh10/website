@@ -115,6 +115,168 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 
 /***/ }),
 
+/***/ "./components/ProjectCalculator/DisplayLangs.tsx":
+/*!*******************************************************!*\
+  !*** ./components/ProjectCalculator/DisplayLangs.tsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _container_gitprojects_gitProjectCalculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../container/gitprojects/gitProjectCalculator */ "./container/gitprojects/gitProjectCalculator.ts");
+/* harmony import */ var _GitLang__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GitLang */ "./components/ProjectCalculator/GitLang.tsx");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/ProjectCalculator/DisplayLangs.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+ //
+
+
+
+
+const DisplayLangs = () => {
+  const {
+    gitLangFreq,
+    isLoading
+  } = Object(_container_gitprojects_gitProjectCalculator__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+  if (isLoading) {
+    return __jsx("p", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 12
+      }
+    }, "Loading");
+  }
+
+  let gitLangs = gitLangFreq && Object.keys(gitLangFreq);
+  const Printed = [];
+
+  if (gitLangs) {
+    for (var i = 0; i < gitLangs.length; i++) {
+      Printed.push(__jsx(_GitLang__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        key: i,
+        language: gitLangs[i],
+        ammount: gitLangFreq[gitLangs[i]],
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20,
+          columnNumber: 9
+        }
+      }));
+    }
+  }
+
+  let primaryLanguage = gitLangFreq && Object.keys(gitLangFreq).reduce((a, b) => gitLangFreq[a] > gitLangFreq[b] ? a : b);
+  let langLength = gitLangs && gitLangs.length;
+  let otherLanguages = gitLangs && gitLangs.length - 1;
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 5
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+    className: "metrics " + (langLength > 4 ? "ScrollX bigMetric" : "noScrollX smallMetric"),
+    noGutters: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 7
+    }
+  }, gitLangs && Printed));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DisplayLangs);
+
+/***/ }),
+
+/***/ "./components/ProjectCalculator/DisplayTopLangText.tsx":
+/*!*************************************************************!*\
+  !*** ./components/ProjectCalculator/DisplayTopLangText.tsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _container_gitprojects_gitProjectCalculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../container/gitprojects/gitProjectCalculator */ "./container/gitprojects/gitProjectCalculator.ts");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/ProjectCalculator/DisplayTopLangText.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+ //
+
+
+
+const DisplayTopLangText = () => {
+  const {
+    gitLangFreq,
+    isLoading
+  } = Object(_container_gitprojects_gitProjectCalculator__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+  if (isLoading) {
+    return __jsx("p", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 12
+      }
+    }, "Loading");
+  }
+
+  let gitLangs = gitLangFreq && Object.keys(gitLangFreq);
+  let primaryLanguage = gitLangFreq && Object.keys(gitLangFreq).reduce((a, b) => gitLangFreq[a] > gitLangFreq[b] ? a : b);
+  let otherLanguages = gitLangs && gitLangs.length - 1;
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "metricTitle",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 7
+    }
+  }, __jsx("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 9
+    }
+  }, `Primarily working with ${primaryLanguage}`), __jsx("h2", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 9
+    }
+  }, `and ${otherLanguages} other languages`)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DisplayTopLangText);
+
+/***/ }),
+
 /***/ "./components/ProjectCalculator/GitLang.tsx":
 /*!**************************************************!*\
   !*** ./components/ProjectCalculator/GitLang.tsx ***!
@@ -167,17 +329,25 @@ const GitLang = ({
       lineNumber: 13,
       columnNumber: 9
     }
-  }, ammount), ammount > 1 ? " Projects" : " Project"));
+  }, ammount), __jsx("div", {
+    className: "metricAmmount",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 9
+    }
+  }, ammount > 1 ? " Projects" : " Project")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (GitLang);
 
 /***/ }),
 
-/***/ "./components/ProjectCalculator/LangGenerator.tsx":
-/*!********************************************************!*\
-  !*** ./components/ProjectCalculator/LangGenerator.tsx ***!
-  \********************************************************/
+/***/ "./components/RecentBlogs/RecentBlog.tsx":
+/*!***********************************************!*\
+  !*** ./components/RecentBlogs/RecentBlog.tsx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -185,92 +355,47 @@ const GitLang = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _container_gitprojects_gitProjectCalculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../container/gitprojects/gitProjectCalculator */ "./container/gitprojects/gitProjectCalculator.ts");
-/* harmony import */ var _GitLang__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GitLang */ "./components/ProjectCalculator/GitLang.tsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/ProjectCalculator/LangGenerator.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/RecentBlogs/RecentBlog.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- //
 
-
-
-
-const LangGenerator = () => {
-  const {
-    gitLangFreq,
-    isLoading
-  } = Object(_container_gitprojects_gitProjectCalculator__WEBPACK_IMPORTED_MODULE_1__["default"])();
-
-  if (isLoading) {
-    return __jsx("p", {
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11,
-        columnNumber: 12
-      }
-    }, "Loading");
-  }
-
-  let gitLangs = gitLangFreq && Object.keys(gitLangFreq);
-  const Printed = [];
-
-  if (gitLangs) {
-    for (var i = 0; i < gitLangs.length; i++) {
-      Printed.push(__jsx(_GitLang__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        key: i,
-        language: gitLangs[i],
-        ammount: gitLangFreq[gitLangs[i]],
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20,
-          columnNumber: 9
-        }
-      }));
-    }
-  }
-
-  let primaryLanguage = gitLangFreq && Object.keys(gitLangFreq).reduce((a, b) => gitLangFreq[a] > gitLangFreq[b] ? a : b);
-  let otherLanguages = gitLangs && gitLangs.length - 1;
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+const RecentBlog = ({
+  title,
+  date
+}) => {
+  return __jsx("div", {
+    className: "recentblog",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 10,
       columnNumber: 5
     }
-  }, __jsx("h1", {
-    className: "metricTitle",
+  }, __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 11,
       columnNumber: 7
     }
-  }, `Primarily working with ${primaryLanguage}`), __jsx("h2", {
-    className: "metricTitle",
+  }, __jsx("b", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 7
+      lineNumber: 12,
+      columnNumber: 9
     }
-  }, `and ${otherLanguages} other languages`), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
-    className: "metrics",
-    noGutters: true,
+  }, title), __jsx("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 7
+      lineNumber: 13,
+      columnNumber: 9
     }
-  }, gitLangs && Printed));
+  }, date)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (LangGenerator);
+/* harmony default export */ __webpack_exports__["default"] = (RecentBlog);
 
 /***/ }),
 
@@ -290,9 +415,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _container_blogs_useBlogs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../container/blogs/useBlogs */ "./container/blogs/useBlogs.ts");
+/* harmony import */ var _RecentBlog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./RecentBlog */ "./components/RecentBlogs/RecentBlog.tsx");
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/RecentBlogs/RecentBlogs.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+
+ //
 
  //
 
@@ -311,7 +439,7 @@ const RecentBlogs = ({
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 12
       }
     }, "Loading");
@@ -319,29 +447,32 @@ const RecentBlogs = ({
 
   console.log(posts);
   return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: "blog-recents",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 22,
       columnNumber: 5
     }
   }, __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, "Recent Blogs"), posts.map((post, index) => {
     if (index < stoppingPoint) {
-      return __jsx("p", {
+      return __jsx(_RecentBlog__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        title: post.fields.Title,
+        date: post.fields.Date,
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25,
+          lineNumber: 27,
           columnNumber: 13
         }
-      }, post.fields.Title, ", ", post.fields.Date);
+      });
     } else {
       null;
     }
@@ -406,7 +537,7 @@ const PastelTextArea = ({
       lineNumber: 19,
       columnNumber: 7
     }
-  }, __jsx("h1", {
+  }, __jsx("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -505,7 +636,7 @@ const useGitProjectCalculator = () => {
     1: setLoading
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`https://api.github.com/users/${"isaacmcintyre"}/repos`).then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`https://api.github.com/users/${"craigwh10"}/repos`).then(function (response) {
       setGitLangFreq(response.data.reduce((acc, it) => {
         acc[it.language] = acc[it.language] + 1 || 1;
         return acc;
@@ -1263,6 +1394,8 @@ function delBasePath(path) {
   return path.indexOf(basePath) === 0 ? path.substr(basePath.length) || '/' : path;
 }
 
+exports.delBasePath = delBasePath;
+
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
 }
@@ -1274,8 +1407,8 @@ function fetchNextData(pathname, query, isServerRender, cb) {
 
   function getResponse() {
     return fetch(utils_1.formatWithValidation({
-      // @ts-ignore __NEXT_DATA__
-      pathname: `/_next/data/${__NEXT_DATA__.buildId}${pathname}.json`,
+      pathname: addBasePath( // @ts-ignore __NEXT_DATA__
+      `/_next/data/${__NEXT_DATA__.buildId}${delBasePath(pathname)}.json`),
       query
     }), {
       // Cookies are required to be present for Next.js' SSG "Preview Mode".
@@ -2020,11 +2153,16 @@ exports.getRouteMatcher = getRouteMatcher;
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+}); // this isn't importing the escape-string-regex module
+// to reduce bytes
+
+function escapeRegex(str) {
+  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+}
 
 function getRouteRegex(normalizedRoute) {
   // Escape all characters that could be considered RegEx
-  const escapedRoute = (normalizedRoute.replace(/\/$/, '') || '/').replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+  const escapedRoute = escapeRegex(normalizedRoute.replace(/\/$/, '') || '/');
   const groups = {};
   let groupIndex = 1;
   const parameterizedRoute = escapedRoute.replace(/\/\\\[([^/]+?)\\\](?=\/|$)/g, (_, $1) => {
@@ -2037,10 +2175,24 @@ function getRouteRegex(normalizedRoute) {
     };
     return isCatchAll ? '/(.+?)' : '/([^/]+?)';
   });
-  return {
+  let namedParameterizedRoute; // dead code eliminate for browser since it's only needed
+  // while generating routes-manifest
+
+  if (true) {
+    namedParameterizedRoute = escapedRoute.replace(/\/\\\[([^/]+?)\\\](?=\/|$)/g, (_, $1) => {
+      const isCatchAll = /^(\\\.){3}/.test($1);
+      const key = $1 // Un-escape key
+      .replace(/\\([|\\{}()[\]^$+*?.-])/g, '$1').replace(/^\.{3}/, '');
+      return isCatchAll ? `/(?<${escapeRegex(key)}>.+?)` : `/(?<${escapeRegex(key)}>[^/]+?)`;
+    });
+  }
+
+  return Object.assign({
     re: new RegExp('^' + parameterizedRoute + '(?:/)?$', 'i'),
     groups
-  };
+  }, namedParameterizedRoute ? {
+    namedRegex: `^${namedParameterizedRoute}(?:/)?$`
+  } : {});
 }
 
 exports.getRouteRegex = getRouteRegex;
@@ -2208,12 +2360,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_RecentBlogs_RecentBlogs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/RecentBlogs/RecentBlogs */ "./components/RecentBlogs/RecentBlogs.tsx");
-/* harmony import */ var _components_ProjectCalculator_LangGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ProjectCalculator/LangGenerator */ "./components/ProjectCalculator/LangGenerator.tsx");
-/* harmony import */ var _components_TextAreas_PastelTextArea_PastelTextArea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/TextAreas/PastelTextArea/PastelTextArea */ "./components/TextAreas/PastelTextArea/PastelTextArea.tsx");
+/* harmony import */ var _components_ProjectCalculator_DisplayLangs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ProjectCalculator/DisplayLangs */ "./components/ProjectCalculator/DisplayLangs.tsx");
+/* harmony import */ var _components_ProjectCalculator_DisplayTopLangText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ProjectCalculator/DisplayTopLangText */ "./components/ProjectCalculator/DisplayTopLangText.tsx");
+/* harmony import */ var _components_TextAreas_PastelTextArea_PastelTextArea__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/TextAreas/PastelTextArea/PastelTextArea */ "./components/TextAreas/PastelTextArea/PastelTextArea.tsx");
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  //
+
 
 
  //
@@ -2225,23 +2379,22 @@ const IndexPage = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 5
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
-    className: "metrics",
-    noGutters: true,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 7
-    }
-  }, __jsx(_components_ProjectCalculator_LangGenerator__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: "heroHeader",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18,
+      columnNumber: 7
+    }
+  }, __jsx(_components_ProjectCalculator_DisplayTopLangText__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
       columnNumber: 9
     }
   })), __jsx("div", {
@@ -2249,14 +2402,14 @@ const IndexPage = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 7
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 9
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
@@ -2264,17 +2417,17 @@ const IndexPage = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 11
     }
-  }, __jsx(_components_TextAreas_PastelTextArea_PastelTextArea__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_TextAreas_PastelTextArea_PastelTextArea__WEBPACK_IMPORTED_MODULE_5__["default"], {
     color: "white",
     title: "hello",
     secondary: false,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 13
     }
   }, "hello Everyone"), __jsx(_components_RecentBlogs_RecentBlogs__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2282,10 +2435,26 @@ const IndexPage = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 13
     }
-  })))));
+  })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    className: "metrics",
+    noGutters: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 7
+    }
+  }, __jsx(_components_ProjectCalculator_DisplayLangs__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 9
+    }
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);

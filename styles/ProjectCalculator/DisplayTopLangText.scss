@@ -1,0 +1,16 @@
+.heroHeader {
+  z-index: 2;
+  position: relative;
+  @include themed() {
+    background: t("heroHeader");
+    color: t("importantContent");
+  }
+}
+
+.metricTitle {
+  text-align: left;
+  @include themed() {
+    color: t("text");
+  }
+  margin: 4em 0em;
+}

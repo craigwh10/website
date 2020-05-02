@@ -4,7 +4,7 @@ import useGitProjectCalculator from "../../container/gitprojects/gitProjectCalcu
 import GitLang from "./GitLang";
 import { Container, Row } from "react-bootstrap";
 
-const LangGenerator: React.SFC = () => {
+const DisplayLangs: React.SFC = () => {
   const { gitLangFreq, isLoading } = useGitProjectCalculator();
 
   if (isLoading) {
@@ -31,18 +31,22 @@ const LangGenerator: React.SFC = () => {
     Object.keys(gitLangFreq).reduce((a, b) =>
       gitLangFreq[a] > gitLangFreq[b] ? a : b
     );
-
+  let langLength = gitLangs && gitLangs.length;
   let otherLanguages = gitLangs && gitLangs.length - 1;
 
   return (
     <Container>
-      <h1 className="metricTitle">{`Primarily working with ${primaryLanguage}`}</h1>
-      <h2 className="metricTitle">{`and ${otherLanguages} other languages`}</h2>
-      <Row className={"metrics"} noGutters>
+      <Row
+        className={
+          "metrics " +
+          (langLength > 4 ? "ScrollX bigMetric" : "noScrollX smallMetric")
+        }
+        noGutters
+      >
         {gitLangs && Printed}
       </Row>
     </Container>
   );
 };
 
-export default LangGenerator;
+export default DisplayLangs;

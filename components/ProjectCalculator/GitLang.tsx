@@ -11,7 +11,9 @@ const GitLang: React.SFC<Props> = ({ language, ammount }) => {
       <div className={"animated gitMetric fadeIn height-" + ammount}>
         <span>{language == "null" ? " Other" : language}</span>
         <div>{ammount}</div>
-        {ammount > 1 ? " Projects" : " Project"}
+        <div className="metricAmmount">
+          {ammount > 1 ? " Projects" : " Project"}
+        </div>
       </div>
     </Col>
   );

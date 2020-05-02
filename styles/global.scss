@@ -23,7 +23,7 @@ footer .footer {
   overflow: hidden;
 
   @include themed() {
-    background: t("primaryBackground");
+    background: t("heroHeader");
   }
   min-height: 46vh;
 }

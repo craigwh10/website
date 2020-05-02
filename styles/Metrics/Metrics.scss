@@ -9,21 +9,11 @@
   min-height: 26vh;
 }
 
-.metricTitle {
-  text-align: center;
-  color: #fff;
-}
-
-h1.metricTitle {
-  margin-top: 2em;
-}
-
 @media (max-width: 1150px) {
   .metrics {
     -webkit-flex-wrap: nowrap !important;
     -ms-flex-wrap: nowrap !important;
     flex-wrap: nowrap !important;
-    overflow-x: scroll;
     display: flex;
     overflow-y: hidden;
     -webkit-box-orient: horizontal !important;
@@ -31,5 +21,20 @@ h1.metricTitle {
     -webkit-flex-direction: row !important;
     -ms-flex-direction: row !important;
     flex-direction: row !important;
+  }
+  .scrollX {
+    overflow-x: scroll;
+  }
+  .bigMetric .gitMetric {
+    width: 100%;
+  }
+  .smallMetric .gitMetric {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bigMetric .metricAmmount {
+    display: none;
   }
 }

@@ -6,12 +6,6 @@ a.NavLink {
   color: black;
 }
 
-.heroHeader {
-  z-index: 2;
-  position: relative;
-  @include themed() {
-    background: t("primaryBackground");
-    color: t("importantContent");
-  }
-  padding-top: 1rem;
+.Nav {
+  background: white;
 }

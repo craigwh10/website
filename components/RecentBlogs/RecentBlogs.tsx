@@ -3,6 +3,8 @@ import { Col } from "react-bootstrap";
 import Link from "next/link";
 //
 import useBlogs from "../../container/blogs/useBlogs";
+//
+import RecentBlog from "./RecentBlog";
 
 export interface RecentBlogsProps {
   stoppingPoint: number;
@@ -17,14 +19,12 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({ stoppingPoint }) => {
 
   console.log(posts);
   return (
-    <Col>
+    <Col className="blog-recents">
       <h2>Recent Blogs</h2>
       {posts.map((post, index) => {
         if (index < stoppingPoint) {
           return (
-            <p>
-              {post.fields.Title}, {post.fields.Date}
-            </p>
+            <RecentBlog title={post.fields.Title} date={post.fields.Date} />
           );
         } else {
           null;

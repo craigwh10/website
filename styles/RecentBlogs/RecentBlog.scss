@@ -1,0 +1,18 @@
+.recentblog {
+  background: white;
+  padding: 1rem;
+}
+
+p.recentblog {
+  @include themed() {
+    color: t("recentBlogsText");
+  }
+}
+
+.recentblog p {
+  margin-bottom: 0rem !important;
+}
+
+.recentblog span {
+  display: block;
+}

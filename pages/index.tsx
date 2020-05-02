@@ -3,7 +3,8 @@ import { NextPage } from "next";
 import { Row, Col, Container } from "react-bootstrap";
 //
 import RecentBlogs from "../components/RecentBlogs/RecentBlogs";
-import LangGenerator from "../components/ProjectCalculator/LangGenerator";
+import DisplayLangs from "../components/ProjectCalculator/DisplayLangs";
+import DisplayTopLangText from "../components/ProjectCalculator/DisplayTopLangText";
 //
 import PastelTextArea from "../components/TextAreas/PastelTextArea/PastelTextArea";
 
@@ -14,8 +15,8 @@ interface Props extends InitialProps {}
 const IndexPage: NextPage<Props, InitialProps> = () => {
   return (
     <React.Fragment>
-      <Row className={"metrics"} noGutters>
-        <LangGenerator />
+      <Row className={"heroHeader"}>
+        <DisplayTopLangText />
       </Row>
       <div className="container-holder">
         <Container>
@@ -27,6 +28,9 @@ const IndexPage: NextPage<Props, InitialProps> = () => {
           </Row>
         </Container>
       </div>
+      <Row className={"metrics"} noGutters>
+        <DisplayLangs />
+      </Row>
     </React.Fragment>
   );
 };

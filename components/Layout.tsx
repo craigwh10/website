@@ -22,6 +22,7 @@ const Layout: React.FC = ({ children }) => {
     <>
       <Navbar
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
+        darkModeToggle={toggleTheme}
       />
       <Main
         className={
@@ -29,7 +30,6 @@ const Layout: React.FC = ({ children }) => {
         }
         content={children}
       ></Main>
-      <a onClick={toggleTheme}>Fuck</a>
       <Footer
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
       />
