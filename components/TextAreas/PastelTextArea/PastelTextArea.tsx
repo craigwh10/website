@@ -4,7 +4,7 @@ import { Row, Col, Container } from "react-bootstrap";
 export interface Props {
   color?: string;
   title?: string;
-  children: string;
+  children: any;
   secondary: boolean;
 }
 

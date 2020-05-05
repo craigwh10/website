@@ -1,5 +1,9 @@
 .blog-recents {
   h2,
   p {
+    @include themed() {
+      background: t("mainBackground");
+      color: t("importantContent");
+    }
   }
 }

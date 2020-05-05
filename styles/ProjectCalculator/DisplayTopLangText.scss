@@ -2,9 +2,10 @@
   z-index: 2;
   position: relative;
   @include themed() {
-    background: t("heroHeader");
+    background: t("mainBackground");
     color: t("importantContent");
   }
+  min-height: 45vh;
 }
 
 .metricTitle {
@@ -12,5 +13,4 @@
   @include themed() {
     color: t("text");
   }
-  margin: 4em 0em;
 }

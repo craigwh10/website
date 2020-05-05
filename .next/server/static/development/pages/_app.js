@@ -126,8 +126,18 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Navbar_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navbar/Navigationlinks */ "./components/Navbar/Navigationlinks.tsx");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../constants */ "./constants.ts");
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Footer/Footer.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
 
 
 const Footer = props => {
@@ -136,7 +146,7 @@ const Footer = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 16,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -144,17 +154,75 @@ const Footer = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 17,
       columnNumber: 7
     }
-  }, __jsx("p", {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 18,
       columnNumber: 9
     }
-  }, "Footer")));
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 11
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: 3,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 15
+    }
+  }, __jsx("a", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 17
+    }
+  }, "Logo"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: {
+      span: 3,
+      offset: 6
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 13
+    }
+  }, __jsx(_Navbar_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    links: _constants__WEBPACK_IMPORTED_MODULE_4__["links"],
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 15
+    }
+  }), __jsx("a", {
+    onClick: props.darkModeToggle,
+    className: props.theme ? "lightmodelink" : "darkmodelink",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 15
+    }
+  }, props.theme ? "Light Mode" : "Dark Mode"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
@@ -177,8 +245,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ //Components
 
-//Components
 
  //
 
@@ -203,10 +271,11 @@ const Layout = ({
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
     darkModeToggle: toggleTheme,
+    theme: theme.dark,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 21,
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -215,15 +284,17 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 26,
       columnNumber: 7
     }
   }), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
+    darkModeToggle: toggleTheme,
+    theme: theme.dark,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 32,
       columnNumber: 7
     }
   }));
@@ -306,7 +377,7 @@ const Navbar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 18,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -314,22 +385,21 @@ const Navbar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 7
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-    fluid: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 9
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
@@ -337,7 +407,7 @@ const Navbar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 13
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -345,25 +415,25 @@ const Navbar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 15
     }
   }, __jsx("a", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 17
     }
   }, "Logo"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
-      span: 2,
-      offset: 7
+      span: 3,
+      offset: 6
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 13
     }
   }, __jsx(_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -371,18 +441,19 @@ const Navbar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 15
     }
   }), __jsx("a", {
+    className: props.theme ? "lightmodelink" : "darkmodelink",
     onClick: props.darkModeToggle,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 15
     }
-  }, "Darkmode"))))));
+  }, props.theme ? "Light Mode" : "Dark Mode"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -420,6 +491,7 @@ const NavigationLinks = ({
 }, links.map((item, index) => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   key: index,
   href: item.link,
+  as: item.link,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -451,10 +523,10 @@ const NavigationLinks = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "links", function() { return links; });
 const links = [{
-  link: "projects",
+  link: "/projects",
   content: "Projects"
 }, {
-  link: "blog",
+  link: "/blog",
   content: "Blog"
 }];
 

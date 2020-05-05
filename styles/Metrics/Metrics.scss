@@ -3,10 +3,6 @@
 }
 
 .metrics {
-  @include themed() {
-    background: t("importantContent");
-  }
-  min-height: 26vh;
 }
 
 @media (max-width: 1150px) {
@@ -24,12 +20,6 @@
   }
   .scrollX {
     overflow-x: scroll;
-  }
-  .bigMetric .gitMetric {
-    width: 100%;
-  }
-  .smallMetric .gitMetric {
-    width: 50%;
   }
 }
 

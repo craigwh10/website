@@ -35,7 +35,7 @@ const DisplayLangs: React.SFC = () => {
   let otherLanguages = gitLangs && gitLangs.length - 1;
 
   return (
-    <Container>
+    <Container fluid>
       <Row
         className={
           "metrics " +

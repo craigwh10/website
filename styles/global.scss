@@ -19,11 +19,26 @@ footer .footer {
   }
 }
 
+.nopadding .container-fluid {
+  padding: 0;
+}
+
 .container-holder {
   overflow: hidden;
 
   @include themed() {
-    background: t("heroHeader");
+    background: t("secondaryBackground");
   }
-  min-height: 46vh;
+  min-height: 50vh;
+  border-radius: 15em 0em 0em 0em;
+}
+
+@media (max-width: 1050px) {
+  .container-holder {
+    border-radius: 0em;
+  }
+}
+
+.hero {
+  margin: 4em 0em;
 }

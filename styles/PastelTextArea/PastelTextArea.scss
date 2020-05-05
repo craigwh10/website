@@ -7,14 +7,14 @@
 .pastel-whitebox {
   @include themed() {
     background: t("cardBackground");
-    color: t("importantContent");
+    color: t("textColorOnWhite");
   }
-  padding: 0 15px 9999px 9999px;
-  margin: 0 -15px -9999px -9999px;
+  // padding: 0 15px 9999px 9999px;
+  // margin: 0 -15px -9999px -9999px;
 }
 
 .pastel-bluebox {
   background: blue;
-  padding: 0 15px 9999px 9999px;
-  margin: 0 -15px -9999px -9999px;
+  // padding: 0 15px 9999px 9999px;
+  // margin: 0 -15px -9999px -9999px;
 }

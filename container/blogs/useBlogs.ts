@@ -23,8 +23,16 @@ const useBlogs = () => {
     Key: string;
     image: string;
     Title: string;
+    content: string;
+    id: string;
     url: string;
     alt: string;
+    author: string;
+    keys: Keys[];
+  }
+
+  interface Keys {
+    contentTags: string[];
   }
 
   const [posts, setPosts] = useState<posts>([]);

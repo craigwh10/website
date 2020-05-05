@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import { Container } from "react-bootstrap";
 //Components
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
@@ -23,6 +21,7 @@ const Layout: React.FC = ({ children }) => {
       <Navbar
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
         darkModeToggle={toggleTheme}
+        theme={theme.dark}
       />
       <Main
         className={
@@ -32,6 +31,8 @@ const Layout: React.FC = ({ children }) => {
       ></Main>
       <Footer
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
+        darkModeToggle={toggleTheme}
+        theme={theme.dark}
       />
     </>
   );

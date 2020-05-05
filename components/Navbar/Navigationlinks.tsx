@@ -11,7 +11,7 @@ interface AllLinks {
 const NavigationLinks: React.FC<AllLinks> = ({ links }: AllLinks) => (
   <React.Fragment>
     {links.map((item, index) => (
-      <Link key={index} href={item.link}>
+      <Link key={index} href={item.link} as={item.link}>
         <a className={"NavLink"}>{item.content}</a>
       </Link>
     ))}

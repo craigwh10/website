@@ -1,6 +1,9 @@
 .recentblog {
   background: white;
   padding: 1rem;
+  @include themed() {
+    background: t("cardBackground");
+  }
 }
 
 p.recentblog {
