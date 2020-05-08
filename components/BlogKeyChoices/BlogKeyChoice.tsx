@@ -12,8 +12,11 @@ const BlogKeyChoice: React.SFC<BlogKeyChoiceProps> = ({
   onClick,
 }) => {
   return (
-    <div className="blog-key-choice" onClick={onClick}>
-      <span>{choice}</span> {value}
+    <div
+      className={value > 0 ? "blog-key-choice" : "blog-key-choice choose-all"}
+      onClick={onClick}
+    >
+      <span>{choice}</span> {value > 0 ? value : null}
     </div>
   );
 };

@@ -14,6 +14,13 @@ const BlogKeyChoices: React.FC = () => {
 
   return (
     <Col className="hero">
+      <BlogKeyChoice
+        choice="All"
+        value={-1}
+        onClick={() => {
+          setFilterChoice("All");
+        }}
+      />
       {Object.keys(blogKeys).map((choice, index) => {
         const value = blogKeys[choice];
 

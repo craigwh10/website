@@ -44,7 +44,7 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({
   );
 
   let conditionalPost =
-    isConditional && filterChoice != ""
+    isConditional && filterChoice != "" && filterChoice != "All"
       ? filterBlogsByKeys(posts, filterChoice)
       : posts;
 
