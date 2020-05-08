@@ -49,7 +49,11 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({
       : posts;
 
   return (
-    <Col className="blog-recents hero">
+    <Col
+      className={
+        "blog-recents hero " + (isConditional ? "conditionalrecentblog" : null)
+      }
+    >
       {filterTitle && filterChoice.length > 0 ? (
         <FilterTitle />
       ) : isConditional ? (

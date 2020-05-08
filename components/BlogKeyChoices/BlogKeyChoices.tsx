@@ -13,7 +13,7 @@ const BlogKeyChoices: React.FC = () => {
   const blogKeys = getAllBlogKeys(posts);
 
   return (
-    <Col className="hero">
+    <Col className="hero" lg={4} xs={12} sm={6}>
       <BlogKeyChoice
         choice="All"
         value={-1}

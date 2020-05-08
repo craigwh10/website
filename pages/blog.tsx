@@ -5,7 +5,7 @@ import BlogKeyChoices from "../components/BlogKeyChoices/BlogKeyChoices";
 import { useState } from "react";
 import { filterContext } from "../helper/ChoiceContext/ChoiceContext";
 
-function HomePage() {
+function BlogPage() {
   const [filterChoice, setFilterChoice] = useState("");
 
   return (
@@ -20,4 +20,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default BlogPage;

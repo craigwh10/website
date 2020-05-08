@@ -3,7 +3,9 @@
 
 a.NavLink {
   padding-right: 1rem;
-  color: black;
+  @include themed() {
+    color: t("textColorOnWhite");
+  }
 }
 
 .Nav {
@@ -20,6 +22,7 @@ a.darkmodelink {
   color: $primary;
   padding: 0.25em;
   border-radius: 1em;
+  line-break: anywhere;
 }
 
 a.lightmodelink {
@@ -27,6 +30,7 @@ a.lightmodelink {
   color: $primarydark;
   padding: 0.25em;
   border-radius: 1em;
+  line-break: anywhere;
 }
 
 a.darkmodelink:hover,

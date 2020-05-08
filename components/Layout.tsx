@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //Components
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
@@ -10,17 +10,24 @@ const Layout: React.FC = ({ children }) => {
     dark: false,
   });
 
+  useEffect(() => {
+    setTheme({ dark: localStorage.isDark });
+  }, []);
+
   const toggleTheme = () => {
     setTheme({
+      ...theme,
       dark: !theme.dark,
     });
+    let localTheme = !theme.dark;
+    localStorage.setItem("isDark", String(localTheme));
   };
 
   return (
     <>
       <Navbar
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
-        darkModeToggle={toggleTheme}
+        darkModeToggle={() => toggleTheme()}
         theme={theme.dark}
       />
       <Main
@@ -31,7 +38,7 @@ const Layout: React.FC = ({ children }) => {
       ></Main>
       <Footer
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
-        darkModeToggle={toggleTheme}
+        darkModeToggle={() => toggleTheme()}
         theme={theme.dark}
       />
     </>

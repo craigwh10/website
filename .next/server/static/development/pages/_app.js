@@ -245,6 +245,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
 var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
  //Components
 
 
@@ -261,21 +268,28 @@ const Layout = ({
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     dark: false
   });
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    setTheme({
+      dark: localStorage.isDark
+    });
+  }, []);
 
   const toggleTheme = () => {
-    setTheme({
+    setTheme(_objectSpread({}, theme, {
       dark: !theme.dark
-    });
+    }));
+    let localTheme = !theme.dark;
+    localStorage.setItem("isDark", String(localTheme));
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
-    darkModeToggle: toggleTheme,
+    darkModeToggle: () => toggleTheme(),
     theme: theme.dark,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 28,
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -284,17 +298,17 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 33,
       columnNumber: 7
     }
   }), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
-    darkModeToggle: toggleTheme,
+    darkModeToggle: () => toggleTheme(),
     theme: theme.dark,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 39,
       columnNumber: 7
     }
   }));
@@ -403,7 +417,7 @@ const Navbar = props => {
       columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: 3,
+    md: 2,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -427,8 +441,8 @@ const Navbar = props => {
     }
   }, "Logo"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
-      span: 3,
-      offset: 6
+      span: 10,
+      offset: 0
     },
     __self: undefined,
     __source: {

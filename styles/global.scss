@@ -29,7 +29,7 @@ footer .footer {
   @include themed() {
     background: t("secondaryBackground");
   }
-  min-height: 50vh;
+  min-height: 65vh;
   border-radius: 15em 0em 0em 0em;
 }
 
@@ -40,5 +40,5 @@ footer .footer {
 }
 
 .hero {
-  margin: 4em 0em;
+  margin: 2em 0em;
 }

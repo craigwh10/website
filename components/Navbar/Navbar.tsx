@@ -19,12 +19,12 @@ const Navbar: React.FC<Props> = (props) => {
       <div className={"Nav"}>
         <Container>
           <Row>
-            <Col md={3}>
+            <Col md={2}>
               <Link href="/">
                 <a>Logo</a>
               </Link>
             </Col>
-            <Col md={{ span: 3, offset: 6 }}>
+            <Col md={{ span: 10, offset: 0 }}>
               <Navlinks links={links} />
               <a
                 className={props.theme ? "lightmodelink" : "darkmodelink"}
