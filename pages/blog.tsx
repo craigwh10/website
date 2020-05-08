@@ -12,8 +12,8 @@ function HomePage() {
     <filterContext.Provider value={{ filterChoice, setFilterChoice }}>
       <Container>
         <Row>
-          <FilterableBlogs />
           <BlogKeyChoices />
+          <FilterableBlogs />
         </Row>
       </Container>
     </filterContext.Provider>

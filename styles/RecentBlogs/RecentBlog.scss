@@ -3,7 +3,9 @@
   padding: 1rem;
   @include themed() {
     background: t("cardBackground");
+    border-left: 10px solid t("secondaryBackground");
   }
+  margin-bottom: 0.5rem;
 }
 
 p.recentblog {

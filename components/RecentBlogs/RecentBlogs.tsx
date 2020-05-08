@@ -52,9 +52,9 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({
     <Col className="blog-recents hero">
       {filterTitle && filterChoice.length > 0 ? (
         <FilterTitle />
-      ) : (
-        <h2>Showing all blogs</h2>
-      )}
+      ) : isConditional ? (
+        <h2>Showing All blogs</h2>
+      ) : null}
       {isTitle ? <BlogTitle /> : null}
       {posts.length > 0
         ? conditionalPost.map((post, index) => {
@@ -75,11 +75,13 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({
             }
           })
         : null}
-      <div className="mt-2">
-        <Link href="/blog">
-          <a>See more...</a>
-        </Link>
-      </div>
+      {!isConditional ? (
+        <div className="mt-2">
+          <Link href="/blog">
+            <a>See more...</a>
+          </Link>
+        </div>
+      ) : null}
     </Col>
   );
 };

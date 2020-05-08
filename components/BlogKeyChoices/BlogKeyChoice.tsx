@@ -1,5 +1,5 @@
-import React, { useContext, useMemo } from "react";
-
+import React, { useState } from "react";
+import { BlogKey, HoverOverBlogKey } from "./BlogKey";
 export interface BlogKeyChoiceProps {
   choice: string;
   value: any;
@@ -11,12 +11,20 @@ const BlogKeyChoice: React.SFC<BlogKeyChoiceProps> = ({
   value,
   onClick,
 }) => {
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <div
       className={value > 0 ? "blog-key-choice" : "blog-key-choice choose-all"}
       onClick={onClick}
+      onMouseEnter={() => setIsShown(true)}
+      onMouseLeave={() => setIsShown(false)}
     >
-      <span>{choice}</span> {value > 0 ? value : null}
+      {!isShown ? (
+        <BlogKey choice={choice} value={value} />
+      ) : (
+        <HoverOverBlogKey choice={choice} value={value} />
+      )}
     </div>
   );
 };
