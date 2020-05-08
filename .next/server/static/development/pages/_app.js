@@ -2333,11 +2333,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
- //
 
- //
 
- // import App from "next/app";
 
 
 
@@ -2349,14 +2346,14 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 10,
       columnNumber: 5
     }
   }, __jsx(Component, _extends({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 11,
       columnNumber: 7
     }
   })));

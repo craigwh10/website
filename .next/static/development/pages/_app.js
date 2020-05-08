@@ -20557,11 +20557,8 @@ var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/_app.tsx"
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
- //
 
- //
 
- // import App from "next/app";
 
 
 
@@ -20572,14 +20569,14 @@ function MyApp(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 10,
       columnNumber: 5
     }
   }, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 11,
       columnNumber: 7
     }
   })));
