@@ -35,3 +35,19 @@ export interface displayedBlog {
   author: string;
   key?: string;
 }
+
+//
+
+export interface Project {
+  name: string;
+  html_url: string;
+  language: string;
+  description: string;
+  size: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface GitProjects {
+  data: Project[];
+}

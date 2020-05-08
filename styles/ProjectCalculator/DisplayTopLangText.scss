@@ -3,14 +3,14 @@
   position: relative;
   @include themed() {
     background: t("mainBackground");
-    color: t("importantContent");
   }
-  min-height: 30vh;
+  min-height: 35vh;
+  color: #fff;
   padding: 2rem 0em;
 }
 
 .metricTitle {
-  text-align: left;
+  text-align: center;
   @include themed() {
     color: t("text");
   }

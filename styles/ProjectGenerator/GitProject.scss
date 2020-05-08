@@ -1,4 +1,72 @@
 .GitProject {
-  background: red;
-  width: 90%;
+  @include themed() {
+    background: t("secondaryBackground");
+    color: t("textColorOnWhite");
+    margin-top: 2em;
+  }
+  padding: 0rem 1rem 1.5rem 1rem;
+}
+
+.GitProjects {
+  padding-bottom: 4em;
+}
+
+.GitProject-title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.GitProject span {
+  padding: 0.25em 0.5em;
+  border-radius: 1em;
+  margin-left: 0.5rem;
+  font-size: 12px;
+}
+
+.GitProject .JavaScript {
+  background: #e9d44d;
+  color: black;
+}
+
+.GitProject .C\# {
+  background: #903ba7;
+  color: white;
+}
+
+.GitProject-stats {
+  float: left;
+  display: flex;
+  font-size: 12px;
+}
+
+.GitProject-size {
+  padding: 0.5rem;
+  @include themed() {
+    background: t("footer");
+    color: t("textColorOnWhite");
+  }
+  color: white;
+  border-radius: 1em;
+  margin-right: 0.5rem;
+}
+
+.GitProject-created_at {
+  @include themed() {
+    background: t("footer");
+    color: t("textColorOnWhite");
+  }
+  color: white;
+  border-radius: 1em;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.GitProject-updated_at {
+  @include themed() {
+    background: t("footer");
+    color: t("textColorOnWhite");
+  }
+  color: white;
+  border-radius: 1em;
+  padding: 0.5rem;
 }

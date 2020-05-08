@@ -32,7 +32,9 @@ const Layout: React.FC = ({ children }) => {
       />
       <Main
         className={
-          "theme main " + (theme.dark ? "theme--dark" : "theme--default")
+          "theme  " +
+          (theme.dark ? "theme--dark " : "theme--default ") +
+          (Object(children).type.name == "IndexPage" ? "Index" : "Main")
         }
         content={children}
       ></Main>

@@ -12,7 +12,7 @@ interface Props extends InitialProps {}
 
 const IndexPage: NextPage<Props, InitialProps> = () => {
   return (
-    <React.Fragment>
+    <React.Fragment key="index">
       <div className={"heroHeader"}>
         <Container>
           <Row>

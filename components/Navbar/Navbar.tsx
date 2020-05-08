@@ -21,13 +21,25 @@ const Navbar: React.FC<Props> = (props) => {
           <Row>
             <Col md={2}>
               <Link href="/">
-                <a>Logo</a>
+                {props.theme ? (
+                  <a className="logo">
+                    Craig <span className="dark rectangle"></span> #202123;
+                  </a>
+                ) : (
+                  <a className="logo">
+                    Craig <span className="white rectangle"></span> #FFF;
+                  </a>
+                )}
               </Link>
             </Col>
-            <Col md={{ span: 10, offset: 0 }}>
+            <Col md={{ span: 10 }}>
               <Navlinks links={links} />
               <a
-                className={props.theme ? "lightmodelink" : "darkmodelink"}
+                className={
+                  props.theme
+                    ? "lightmodelink pullright-desktop"
+                    : "darkmodelink pullright-desktop"
+                }
                 onClick={props.darkModeToggle}
               >
                 {props.theme ? "Light Mode" : "Dark Mode"}

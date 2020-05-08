@@ -1,3 +1,9 @@
+.Index {
+  @include themed() {
+    background: t("dynamicNav") !important;
+  }
+}
+
 .Main {
   @include themed() {
     background: t("primaryBackground");

@@ -172,7 +172,7 @@ const Footer = props => {
       columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: 3,
+    md: 2,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -187,22 +187,46 @@ const Footer = props => {
       lineNumber: 21,
       columnNumber: 15
     }
-  }, __jsx("a", {
+  }, props.theme ? __jsx("a", {
+    className: "logo logo-footer",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 17
+      lineNumber: 23,
+      columnNumber: 19
     }
-  }, "Logo"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  }, "Craig ", __jsx("span", {
+    className: "dark rectangle",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 27
+    }
+  }), " #202123;") : __jsx("a", {
+    className: "logo logo-footer",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 19
+    }
+  }, "Craig ", __jsx("span", {
+    className: "white rectangle",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 27
+    }
+  }), " #FFF;"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
-      span: 3,
-      offset: 6
+      span: 10
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 33,
       columnNumber: 13
     }
   }, __jsx(_Navbar_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -210,16 +234,16 @@ const Footer = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 34,
       columnNumber: 15
     }
   }), __jsx("a", {
     onClick: props.darkModeToggle,
-    className: props.theme ? "lightmodelink" : "darkmodelink",
+    className: props.theme ? "lightmodelink pullright-desktop" : "darkmodelink pullright-desktop",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 35,
       columnNumber: 15
     }
   }, props.theme ? "Light Mode" : "Dark Mode"))))));
@@ -293,7 +317,7 @@ const Layout = ({
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: "theme main " + (theme.dark ? "theme--dark" : "theme--default"),
+    className: "theme  " + (theme.dark ? "theme--dark " : "theme--default ") + (Object(children).type.name == "IndexPage" ? "Index" : "Main"),
     content: children,
     __self: undefined,
     __source: {
@@ -308,7 +332,7 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 41,
       columnNumber: 7
     }
   }));
@@ -343,7 +367,7 @@ const Main = props => {
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: "Main",
+    className: props.className,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -432,22 +456,46 @@ const Navbar = props => {
       lineNumber: 23,
       columnNumber: 15
     }
-  }, __jsx("a", {
+  }, props.theme ? __jsx("a", {
+    className: "logo",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 17
+      lineNumber: 25,
+      columnNumber: 19
     }
-  }, "Logo"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  }, "Craig ", __jsx("span", {
+    className: "dark rectangle",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 27
+    }
+  }), " #202123;") : __jsx("a", {
+    className: "logo",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 19
+    }
+  }, "Craig ", __jsx("span", {
+    className: "white rectangle",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 27
+    }
+  }), " #FFF;"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
-      span: 10,
-      offset: 0
+      span: 10
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 35,
       columnNumber: 13
     }
   }, __jsx(_Navigationlinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -455,16 +503,16 @@ const Navbar = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 36,
       columnNumber: 15
     }
   }), __jsx("a", {
-    className: props.theme ? "lightmodelink" : "darkmodelink",
+    className: props.theme ? "lightmodelink pullright-desktop" : "darkmodelink pullright-desktop",
     onClick: props.darkModeToggle,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 37,
       columnNumber: 15
     }
   }, props.theme ? "Light Mode" : "Dark Mode"))))));
@@ -513,7 +561,7 @@ const NavigationLinks = ({
     columnNumber: 7
   }
 }, __jsx("a", {
-  className: "NavLink",
+  className: "NavLink  pullright-desktop",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,

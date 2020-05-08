@@ -3,6 +3,35 @@
 
 a.NavLink {
   padding-right: 1rem;
+  color: white;
+}
+
+.rectangle {
+  width: 4px;
+  display: inline-block;
+  padding: 0.3em;
+  margin-left: 0.4em;
+}
+
+a.logo {
+  color: white;
+}
+
+a:hover.logo {
+  text-decoration: none;
+}
+
+.rectangle.white {
+  background: white;
+  border: 1px solid #333;
+}
+
+.rectangle.dark {
+  background: #323639;
+  border: 1px solid #dcdcdc3d;
+}
+
+.footer a.NavLink {
   @include themed() {
     color: t("textColorOnWhite");
   }
@@ -12,29 +41,37 @@ a.NavLink {
   min-height: 10vh;
   padding-top: 2.5rem;
   @include themed() {
-    background: t("primaryBackground");
+    background: t("dynamicNav");
     color: t("textColorOnWhite");
   }
 }
 
 a.darkmodelink {
-  background: $primarydark;
-  color: $primary;
-  padding: 0.25em;
+  background: $footerdark;
+  color: white;
+  padding: 3px 10px;
+  margin: -3px 1em;
   border-radius: 1em;
   line-break: anywhere;
 }
 
 a.lightmodelink {
-  background: $primary;
-  color: $primarydark;
-  padding: 0.25em;
+  background: $footerlight;
+  color: white;
+  padding: 3px 10px;
   border-radius: 1em;
   line-break: anywhere;
+  margin: -3px 1em;
 }
 
 a.darkmodelink:hover,
 a.lightmodelink:hover {
   cursor: pointer;
   color: #c5c3c3;
+}
+
+@media (min-width: 1024px) {
+  .pullright-desktop {
+    float: right;
+  }
 }

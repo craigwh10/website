@@ -9,7 +9,7 @@ export interface MainProps {
 const Main: React.FC<MainProps> = (props) => {
   return (
     <main className={props.className}>
-      <div className="Main">{props.content}</div>
+      <div className={props.className}>{props.content}</div>
     </main>
   );
 };

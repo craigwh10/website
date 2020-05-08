@@ -17,16 +17,28 @@ const Footer: React.SFC<Props> = (props) => {
       <div className={"footer"}>
         <Container>
           <Row>
-            <Col md={3}>
+            <Col md={2}>
               <Link href="/">
-                <a>Logo</a>
+                {props.theme ? (
+                  <a className="logo logo-footer">
+                    Craig <span className="dark rectangle"></span> #202123;
+                  </a>
+                ) : (
+                  <a className="logo logo-footer">
+                    Craig <span className="white rectangle"></span> #FFF;
+                  </a>
+                )}
               </Link>
             </Col>
-            <Col md={{ span: 3, offset: 6 }}>
+            <Col md={{ span: 10 }}>
               <Navlinks links={links} />
               <a
                 onClick={props.darkModeToggle}
-                className={props.theme ? "lightmodelink" : "darkmodelink"}
+                className={
+                  props.theme
+                    ? "lightmodelink pullright-desktop"
+                    : "darkmodelink pullright-desktop"
+                }
               >
                 {props.theme ? "Light Mode" : "Dark Mode"}
               </a>

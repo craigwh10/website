@@ -1,7 +1,15 @@
 .footer {
   @include themed() {
     background: t("footer");
+    color: t("textColorOnWhite");
   }
 
   padding-top: 2.5rem;
+}
+
+.logo-footer {
+  @include themed() {
+    background: t("footer");
+    color: t("textColorOnWhite");
+  }
 }

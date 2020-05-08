@@ -2,6 +2,7 @@ import React from "react";
 import useGitProjectCalculator from "../../container/gitprojects/gitProjectCalculator";
 //
 import { Col } from "react-bootstrap";
+import { objectSum } from "../../helper/ProjectCalculator/objectSum";
 
 const DisplayTopLangText: React.SFC = () => {
   const { gitLangFreq, isLoading } = useGitProjectCalculator();
@@ -20,6 +21,8 @@ const DisplayTopLangText: React.SFC = () => {
 
   let otherLanguages = gitLangs && gitLangs.length - 1;
 
+  let totalLang = gitLangs && objectSum(gitLangFreq);
+
   return (
     gitLangFreq && (
       <Col>
@@ -35,7 +38,10 @@ const DisplayTopLangText: React.SFC = () => {
             </a>
             {`, and I'm an Associate at AND Digital.`}
             <br />
-            {`I enjoy making products, whether it be the analysis or development of them.`}
+            {`I enjoy creating digital products, whether it be the analysis or development of them.`}
+          </p>
+          <p>
+            {`So far I've been involved with ${totalLang} personal projects, and 4 professional projects.`}
           </p>
         </div>
       </Col>
