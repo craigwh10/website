@@ -1,5 +1,6 @@
 import React from "react";
 import * as types from "../../types";
+import { Container } from "react-bootstrap";
 
 const BlogPostLayout: React.SFC<types.displayedBlog> = ({
   alt,
@@ -13,18 +14,22 @@ const BlogPostLayout: React.SFC<types.displayedBlog> = ({
   key,
 }) => {
   return (
-    <div className="container">
+    <Container>
       <a href={url}>
         <img alt={alt} src={image} />
       </a>
       <div className="text">
-        <h2>{title}</h2>
-        <h4>
-          {date}, by {author}
-        </h4>
-        <p>{content}</p>
+        <div className="blog-title">
+          <h2>{title}</h2>
+          <h4>
+            {date}, by {author}
+          </h4>
+        </div>
+        <div className="blog-content">
+          <p>{content}</p>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

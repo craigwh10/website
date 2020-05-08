@@ -1,0 +1,15 @@
+.blog-content {
+  @include themed() {
+    background: t("secondaryBackground");
+    color: t("textColorOnWhite");
+  }
+  min-height: 50vh;
+  padding: 1rem;
+}
+
+.blog-title {
+  padding-bottom: 1em;
+  @include themed() {
+    color: t("textColorOnWhite");
+  }
+}
