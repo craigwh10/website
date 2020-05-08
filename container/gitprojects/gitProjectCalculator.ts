@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// type AxiosResponse = object[] | null;
-
 const useGitProjectCalculator = () => {
   const [gitLangFreq, setGitLangFreq] = useState<object>(null);
   const [isLoading, setLoading] = useState<boolean>(false);

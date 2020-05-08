@@ -11,7 +11,6 @@ const useGitProjects = () => {
     axios
       .get("https://api.github.com/users/craigwh10/repos")
       .then(function (response) {
-        // I need this data here ^^
         setGitRepos(response);
         setLoading(false);
       })
