@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import * as types from "../../types";
 
 const client = require("contentful").createClient({
   space: process.env.spaceID,
@@ -12,30 +13,7 @@ const useBlogs = () => {
     console.log(`[useBlogs] Error upon getting entries.`);
   }
 
-  type posts = Post[];
-
-  interface Post {
-    fields: field;
-  }
-
-  interface field {
-    Date: string;
-    Key: string;
-    image: string;
-    Title: string;
-    content: string;
-    id: string;
-    url: string;
-    alt: string;
-    author: string;
-    keys: Keys[];
-  }
-
-  interface Keys {
-    contentTags: string[];
-  }
-
-  const [posts, setPosts] = useState<posts>([]);
+  const [posts, setPosts] = useState<types.posts>([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {

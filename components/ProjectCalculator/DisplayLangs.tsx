@@ -26,13 +26,7 @@ const DisplayLangs: React.SFC = () => {
     }
   }
 
-  let primaryLanguage =
-    gitLangFreq &&
-    Object.keys(gitLangFreq).reduce((a, b) =>
-      gitLangFreq[a] > gitLangFreq[b] ? a : b
-    );
   let langLength = gitLangs && gitLangs.length;
-  let otherLanguages = gitLangs && gitLangs.length - 1;
 
   return (
     <Container fluid>

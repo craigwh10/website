@@ -1,22 +1,31 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import Link from "next/link";
-//
+// Hooks
 import useBlogs from "../../container/blogs/useBlogs";
-//
+// Components
 import RecentBlog from "./RecentBlog";
+// Context
+import { filterContext } from "../../helper/ChoiceContext/ChoiceContext";
+// Helpers
+import { filterBlogsByKeys } from "../../helper/blogs/filterBlogsByKey";
 
 export interface RecentBlogsProps {
   stoppingPoint: number;
+  isConditional?: boolean;
   isTitle?: boolean;
+  filterTitle?: boolean;
 }
 
 const RecentBlogs: React.SFC<RecentBlogsProps> = ({
   stoppingPoint,
   isTitle = false,
+  isConditional = false,
+  filterTitle = false,
 }) => {
   const { posts, isLoading } = useBlogs();
-  console.log(posts);
+  const { filterChoice } = React.useContext(filterContext);
+
   if (isLoading) {
     return <p>Loading</p>;
   }
@@ -28,10 +37,24 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({
     </React.Fragment>
   );
 
-  let conditionalPost = true ? posts : null;
+  const FilterTitle: React.SFC = () => (
+    <React.Fragment>
+      <h2>Showing {filterChoice} blogs</h2>
+    </React.Fragment>
+  );
+
+  let conditionalPost =
+    isConditional && filterChoice != ""
+      ? filterBlogsByKeys(posts, filterChoice)
+      : posts;
 
   return (
     <Col className="blog-recents hero">
+      {filterTitle && filterChoice.length > 0 ? (
+        <FilterTitle />
+      ) : (
+        <h2>Showing all blogs</h2>
+      )}
       {isTitle ? <BlogTitle /> : null}
       {posts.length > 0
         ? conditionalPost.map((post, index) => {

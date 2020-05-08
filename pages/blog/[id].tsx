@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import useBlog from "../../container/blogs/useBlogs";
-import Blog from "../../components/BlogPostLayout/BlogPostLayout";
+import BlogPostLayout from "../../components/BlogPostLayout/BlogPostLayout";
 
 export default () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default () => {
     blog &&
     blog.map((item) => {
       return (
-        <Blog
+        <BlogPostLayout
           title={item.fields.Title}
           date={item.fields.Date}
           content={item.fields.content}

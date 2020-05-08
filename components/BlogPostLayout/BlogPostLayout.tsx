@@ -1,18 +1,7 @@
 import React from "react";
+import * as types from "../../types";
 
-interface Props {
-  alt?: string;
-  date: string;
-  image?: string;
-  title: string;
-  id?: string;
-  url?: string;
-  content: string;
-  author: string;
-  key?: string;
-}
-
-const BlogPostLayout: React.SFC<Props> = ({
+const BlogPostLayout: React.SFC<types.displayedBlog> = ({
   alt,
   date,
   image,
