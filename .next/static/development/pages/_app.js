@@ -154,6 +154,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar/Navbar */ "./components/Navbar/Navbar.tsx");
 /* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer/Footer */ "./components/Footer/Footer.tsx");
 /* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
 
 
 var _this = undefined,
@@ -170,10 +172,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
  //
 
+ //
 
 
-var Layout = function Layout(_ref) {
-  var children = _ref.children;
+
+var Layout = function Layout(props) {
+  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_5__["useRouter"])();
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
     dark: false
@@ -204,16 +208,16 @@ var Layout = function Layout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 32,
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (String(Object(children).type.name) == "IndexPage" ? "Index" : "Main"),
-    content: children,
+    className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (router.pathname == "/" ? "Index" : "Main"),
+    content: props.children,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 37,
       columnNumber: 7
     }
   }), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -225,7 +229,7 @@ var Layout = function Layout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 45,
       columnNumber: 7
     }
   }));

@@ -267,6 +267,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar/Navbar */ "./components/Navbar/Navbar.tsx");
 /* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer/Footer */ "./components/Footer/Footer.tsx");
 /* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -281,11 +283,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
  //
 
+ //
 
 
-const Layout = ({
-  children
-}) => {
+
+const Layout = props => {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_4__["useRouter"])();
   const {
     0: theme,
     1: setTheme
@@ -313,16 +316,16 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 32,
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (String(Object(children).type.name) == "IndexPage" ? "Index" : "Main"),
-    content: children,
+    className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (router.pathname == "/" ? "Index" : "Main"),
+    content: props.children,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 37,
       columnNumber: 7
     }
   }), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -332,7 +335,7 @@ const Layout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 45,
       columnNumber: 7
     }
   }));
@@ -2394,6 +2397,17 @@ function MyApp({
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./pages/_app.tsx");
 
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 

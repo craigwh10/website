@@ -4,15 +4,18 @@ import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 //
 import Main from "../components/Main/Main";
+//
+import { useRouter } from "next/router";
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC = (props) => {
+  const router = useRouter();
+
   const [theme, setTheme] = useState({
     dark: false,
   });
 
   useEffect(() => {
     setTheme({ dark: localStorage.isDark });
-    console.log(localStorage);
   }, []);
 
   const toggleTheme = () => {
@@ -23,9 +26,6 @@ const Layout: React.FC = ({ children }) => {
     let localTheme = !theme.dark;
     localStorage.setItem("isDark", String(localTheme));
   };
-
-  console.log(children);
-  console.log(String(Object(children).type.name));
 
   return (
     <>
@@ -38,9 +38,9 @@ const Layout: React.FC = ({ children }) => {
         className={
           "theme " +
           (theme.dark ? "theme--dark " : "theme--default ") +
-          (String(Object(children).type.name) == "IndexPage" ? "Index" : "Main")
+          (router.pathname == "/" ? "Index" : "Main")
         }
-        content={children}
+        content={props.children}
       ></Main>
       <Footer
         className={"theme " + (theme.dark ? "theme--dark" : "theme--default")}
