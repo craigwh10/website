@@ -9,4 +9,9 @@ module.exports = {
 
     return config;
   },
+  env: {
+    spaceID: process.env.spaceID,
+    accessToken: process.env.accessToken,
+    USER: process.env.USER,
+  },
 };
