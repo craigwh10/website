@@ -23,6 +23,10 @@ const Layout: React.FC = ({ children }) => {
     localStorage.setItem("isDark", String(localTheme));
   };
 
+  console.log(localStorage);
+  console.log(children);
+  console.log(String(Object(children).type.name));
+
   return (
     <>
       <Navbar
