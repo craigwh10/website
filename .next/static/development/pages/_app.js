@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../constants */ "./constants.ts");
 var _this = undefined,
-    _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Footer/Footer.tsx";
+    _jsxFileName = "/Users/craigwhite/Desktop/website/components/Footer/Footer.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -157,7 +157,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Layout.tsx";
+    _jsxFileName = "/Users/craigwhite/Desktop/website/components/Layout.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -208,7 +208,7 @@ var Layout = function Layout(_ref) {
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "theme  " + (theme.dark ? "theme--dark " : "theme--default ") + (Object(children).type.name == "IndexPage" ? "Index" : "Main"),
+    className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (String(Object(children).type.name) == "IndexPage" ? "Index" : "Main"),
     content: children,
     __self: _this,
     __source: {
@@ -247,7 +247,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Main/Main.tsx";
+    _jsxFileName = "/Users/craigwhite/Desktop/website/components/Main/Main.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -293,7 +293,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 var _this = undefined,
-    _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navbar.tsx";
+    _jsxFileName = "/Users/craigwhite/Desktop/website/components/Navbar/Navbar.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Bootstrap
@@ -432,7 +432,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navigationlinks.tsx";
+    _jsxFileName = "/Users/craigwhite/Desktop/website/components/Navbar/Navigationlinks.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  //
@@ -20553,7 +20553,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_app_scss__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
 
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/_app.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/pages/_app.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -20786,7 +20786,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx&hotRouterUpdates=true!./");
-module.exports = __webpack_require__(/*! /Users/craigwhite/Desktop/Typescript/Website/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
+module.exports = __webpack_require__(/*! /Users/craigwhite/Desktop/website/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 
 /***/ }),

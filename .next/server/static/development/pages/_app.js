@@ -132,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../constants */ "./constants.ts");
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Footer/Footer.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Footer/Footer.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -267,7 +267,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar/Navbar */ "./components/Navbar/Navbar.tsx");
 /* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer/Footer */ "./components/Footer/Footer.tsx");
 /* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Layout.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -317,7 +317,7 @@ const Layout = ({
       columnNumber: 7
     }
   }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: "theme  " + (theme.dark ? "theme--dark " : "theme--default ") + (Object(children).type.name == "IndexPage" ? "Index" : "Main"),
+    className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (String(Object(children).type.name) == "IndexPage" ? "Index" : "Main"),
     content: children,
     __self: undefined,
     __source: {
@@ -353,7 +353,7 @@ const Layout = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Main/Main.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Main/Main.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -398,7 +398,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../constants */ "./constants.ts");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navbar.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Navbar/Navbar.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Bootstrap
 
@@ -535,7 +535,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/components/Navbar/Navigationlinks.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Navbar/Navigationlinks.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  //
 
@@ -2326,7 +2326,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/app.scss */ "./styles/app.scss");
 /* harmony import */ var _styles_app_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_app_scss__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
-var _jsxFileName = "/Users/craigwhite/Desktop/Typescript/Website/pages/_app.tsx";
+var _jsxFileName = "/Users/craigwhite/Desktop/website/pages/_app.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
