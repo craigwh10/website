@@ -172,7 +172,7 @@ const Footer = props => {
       columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: 2,
+    md: 3,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -221,7 +221,7 @@ const Footer = props => {
     }
   }), " #FFF;"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
-      span: 10
+      span: 9
     },
     __self: undefined,
     __source: {
@@ -444,7 +444,7 @@ const Navbar = props => {
       columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: 2,
+    md: 3,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -493,7 +493,7 @@ const Navbar = props => {
     }
   }), " #FFF;"))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: {
-      span: 10
+      span: 9
     },
     __self: undefined,
     __source: {

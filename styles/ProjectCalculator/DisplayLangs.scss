@@ -4,10 +4,9 @@
 .gitMetric {
   font-size: 0.8rem;
   z-index: 1;
-  @include themed() {
-    color: t("importantContent");
-  }
+  color: white;
   text-align: center;
+  padding-bottom: 2em;
 }
 
 .metrics.row {

@@ -49,44 +49,47 @@ const RecentBlogs: React.SFC<RecentBlogsProps> = ({
       : posts;
 
   return (
-    <Col
-      className={
-        "blog-recents hero " + (isConditional ? "conditionalrecentblog" : null)
-      }
-    >
-      {filterTitle && filterChoice.length > 0 ? (
-        <FilterTitle />
-      ) : isConditional ? (
-        <h2>Showing All blogs</h2>
-      ) : null}
-      {isTitle ? <BlogTitle /> : null}
-      {posts.length > 0
-        ? conditionalPost.map((post, index) => {
-            if (index < stoppingPoint) {
-              return (
-                <Link href={"/blog/" + post.fields.Title}>
-                  <a href="">
-                    <RecentBlog
-                      key={index}
-                      title={post.fields.Title}
-                      date={post.fields.Date}
-                    />
-                  </a>
-                </Link>
-              );
-            } else {
-              null;
-            }
-          })
-        : null}
-      {!isConditional ? (
-        <div className="mt-2">
-          <Link href="/blog">
-            <a>See more...</a>
-          </Link>
-        </div>
-      ) : null}
-    </Col>
+    posts && (
+      <Col
+        className={
+          "blog-recents hero animated fadeIn " +
+          (isConditional ? "conditionalrecentblog" : null)
+        }
+      >
+        {filterTitle && filterChoice.length > 0 ? (
+          <FilterTitle />
+        ) : isConditional ? (
+          <h2>Showing All blogs</h2>
+        ) : null}
+        {isTitle ? <BlogTitle /> : null}
+        {posts.length > 0
+          ? conditionalPost.map((post, index) => {
+              if (index < stoppingPoint) {
+                return (
+                  <Link href={"/blog/" + post.fields.Title}>
+                    <a href="">
+                      <RecentBlog
+                        key={index}
+                        title={post.fields.Title}
+                        date={post.fields.Date}
+                      />
+                    </a>
+                  </Link>
+                );
+              } else {
+                null;
+              }
+            })
+          : null}
+        {!isConditional ? (
+          <div className="mt-2">
+            <Link href="/blog">
+              <a>See more...</a>
+            </Link>
+          </div>
+        ) : null}
+      </Col>
+    )
   );
 };
 

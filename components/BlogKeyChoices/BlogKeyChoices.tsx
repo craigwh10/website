@@ -13,29 +13,31 @@ const BlogKeyChoices: React.FC = () => {
   const blogKeys = getAllBlogKeys(posts);
 
   return (
-    <Col className="hero" lg={4} xs={12} sm={6}>
-      <BlogKeyChoice
-        choice="All"
-        value={-1}
-        onClick={() => {
-          setFilterChoice("All");
-        }}
-      />
-      {Object.keys(blogKeys).map((choice, index) => {
-        const value = blogKeys[choice];
+    posts && (
+      <Col className="hero animated fadeIn" lg={4} xs={12} sm={6}>
+        <BlogKeyChoice
+          choice="All"
+          value={-1}
+          onClick={() => {
+            setFilterChoice("All");
+          }}
+        />
+        {Object.keys(blogKeys).map((choice, index) => {
+          const value = blogKeys[choice];
 
-        return (
-          <BlogKeyChoice
-            key={`BlogKeyChoice_${index}`}
-            choice={choice}
-            value={value}
-            onClick={() => {
-              setFilterChoice(choice);
-            }}
-          />
-        );
-      })}
-    </Col>
+          return (
+            <BlogKeyChoice
+              key={`BlogKeyChoice_${index}`}
+              choice={choice}
+              value={value}
+              onClick={() => {
+                setFilterChoice(choice);
+              }}
+            />
+          );
+        })}
+      </Col>
+    )
   );
 };
 

@@ -12,4 +12,11 @@
   @include themed() {
     color: t("textColorOnWhite");
   }
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.blog-content p {
+  white-space: break-spaces;
 }

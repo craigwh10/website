@@ -29,17 +29,19 @@ const DisplayLangs: React.SFC = () => {
   let langLength = gitLangs && gitLangs.length;
 
   return (
-    <Container fluid>
-      <Row
-        className={
-          "metrics " +
-          (langLength > 4 ? "ScrollX bigMetric" : "noScrollX smallMetric")
-        }
-        noGutters
-      >
-        {gitLangs && Printed}
-      </Row>
-    </Container>
+    gitLangs && (
+      <Container fluid>
+        <Row
+          className={
+            "metrics " +
+            (langLength > 4 ? "ScrollX bigMetric" : "noScrollX smallMetric")
+          }
+          noGutters
+        >
+          {gitLangs && Printed}
+        </Row>
+      </Container>
+    )
   );
 };
 

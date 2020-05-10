@@ -17,7 +17,7 @@ const Footer: React.SFC<Props> = (props) => {
       <div className={"footer"}>
         <Container>
           <Row>
-            <Col md={2}>
+            <Col md={3}>
               <Link href="/">
                 {props.theme ? (
                   <a className="logo logo-footer">
@@ -30,7 +30,7 @@ const Footer: React.SFC<Props> = (props) => {
                 )}
               </Link>
             </Col>
-            <Col md={{ span: 10 }}>
+            <Col md={{ span: 9 }}>
               <Navlinks links={links} />
               <a
                 onClick={props.darkModeToggle}
