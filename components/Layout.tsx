@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { initGA, logPageView } from "../utils/analytics";
 //Components
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
@@ -6,6 +7,8 @@ import Footer from "./Footer/Footer";
 import Main from "../components/Main/Main";
 //
 import { useRouter } from "next/router";
+
+declare const window: any;
 
 const Layout: React.FC = (props) => {
   const router = useRouter();
@@ -16,6 +19,11 @@ const Layout: React.FC = (props) => {
 
   useEffect(() => {
     setTheme({ dark: localStorage.isDark });
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
   }, []);
 
   const toggleTheme = () => {
