@@ -22,7 +22,12 @@ const BlogPostLayout: React.SFC<types.displayedBlog> = ({
         <div className="blog-title animated fadeIn">
           <h2>{title}</h2>
           <h4>
-            {date}, by {author}.
+            <img
+              className="blog-poster-img"
+              src="/craigphoto.jpeg"
+              alt="photo of poster"
+            />
+            {author}, {date}.
           </h4>
         </div>
         <div className="blog-content animated fadeIn">

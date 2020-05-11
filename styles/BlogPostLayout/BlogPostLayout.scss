@@ -8,7 +8,7 @@
 }
 
 .blog-title {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   @include themed() {
     color: t("textColorOnWhite");
   }
@@ -19,4 +19,21 @@
 
 .blog-content p {
   white-space: break-spaces;
+  font-size: 1.2rem;
+}
+
+.blog-poster-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  @include themed() {
+    border: 2px solid t("secondaryBackground");
+  }
+  margin-right: 0.5rem;
+}
+
+.blog-title h4 {
+  @include themed() {
+    color: t("blogSecondaryText");
+  }
 }
