@@ -30,9 +30,7 @@ const BlogPostLayout: React.SFC<types.displayedBlog> = ({
             {author}, {date}.
           </h4>
         </div>
-        <div className="blog-content animated fadeIn">
-          <p>{content}</p>
-        </div>
+        <div className="blog-content animated fadeIn">{content}</div>
       </div>
     </Container>
   );
