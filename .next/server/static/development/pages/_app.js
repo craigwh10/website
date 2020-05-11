@@ -264,11 +264,12 @@ const Footer = props => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar/Navbar */ "./components/Navbar/Navbar.tsx");
-/* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer/Footer */ "./components/Footer/Footer.tsx");
-/* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/analytics */ "./utils/analytics.ts");
+/* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar/Navbar */ "./components/Navbar/Navbar.tsx");
+/* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer/Footer */ "./components/Footer/Footer.tsx");
+/* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Main/Main */ "./components/Main/Main.tsx");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/craigwhite/Desktop/website/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -277,6 +278,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
  //Components
 
@@ -288,7 +290,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const Layout = props => {
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_4__["useRouter"])();
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_5__["useRouter"])();
   const {
     0: theme,
     1: setTheme
@@ -299,6 +301,13 @@ const Layout = props => {
     setTheme({
       dark: localStorage.isDark
     });
+
+    if (!window.GA_INITIALIZED) {
+      Object(_utils_analytics__WEBPACK_IMPORTED_MODULE_1__["initGA"])();
+      window.GA_INITIALIZED = true;
+    }
+
+    Object(_utils_analytics__WEBPACK_IMPORTED_MODULE_1__["logPageView"])();
   }, []);
 
   const toggleTheme = () => {
@@ -309,33 +318,33 @@ const Layout = props => {
     localStorage.setItem("isDark", String(localTheme));
   };
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
     darkModeToggle: () => toggleTheme(),
     theme: theme.dark,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 40,
       columnNumber: 7
     }
-  }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_Main_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "theme " + (theme.dark ? "theme--dark " : "theme--default ") + (router.pathname == "/" ? "Index" : "Main"),
     content: props.children,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 45,
       columnNumber: 7
     }
-  }), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "theme " + (theme.dark ? "theme--dark" : "theme--default"),
     darkModeToggle: () => toggleTheme(),
     theme: theme.dark,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 53,
       columnNumber: 7
     }
   }));
@@ -2388,6 +2397,51 @@ function MyApp({
 
 /***/ }),
 
+/***/ "./utils/analytics.ts":
+/*!****************************!*\
+  !*** ./utils/analytics.ts ***!
+  \****************************/
+/*! exports provided: initGA, logPageView, logEvent, logException */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initGA", function() { return initGA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logPageView", function() { return logPageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logEvent", function() { return logEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logException", function() { return logException; });
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_0__);
+// utils/analytics.js
+
+const initGA = () => {
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize("UA-165960796-1");
+};
+const logPageView = () => {
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.set({
+    page: window.location.pathname
+  });
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(window.location.pathname);
+};
+const logEvent = (category = "", action = "") => {
+  if (category && action) {
+    react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.event({
+      category,
+      action
+    });
+  }
+};
+const logException = (description = "", fatal = false) => {
+  if (description) {
+    react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.exception({
+      description,
+      fatal
+    });
+  }
+};
+
+/***/ }),
+
 /***/ 0:
 /*!*****************************************!*\
   !*** multi private-next-pages/_app.tsx ***!
@@ -2452,6 +2506,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-bootstrap");
+
+/***/ }),
+
+/***/ "react-ga":
+/*!***************************!*\
+  !*** external "react-ga" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-ga");
 
 /***/ }),
 
