@@ -19,11 +19,27 @@
 
 .blog-content p {
   white-space: break-spaces;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .blog-content h2 {
   font-size: 1.3rem;
+  @include themed() {
+    border-left: 3px solid t("blogHeader");
+  }
+  padding-left: 0.5em;
+}
+
+.blog-content ul {
+  margin-bottom: 0rem;
+}
+
+.blog-content h3 {
+  font-size: 1.2rem;
+}
+
+.blog-content h4 {
+  font-size: 1.1rem;
 }
 
 .blog-poster-img {
