@@ -1,7 +1,7 @@
 import React from "react";
 import * as types from "../../types";
 import { Container } from "react-bootstrap";
-
+import { stringToHtml } from "../../helper/BlogPostLayout/stringToHtml";
 const BlogPostLayout: React.SFC<types.displayedBlog> = ({
   alt,
   date,
@@ -30,7 +30,9 @@ const BlogPostLayout: React.SFC<types.displayedBlog> = ({
             {author}, {date}.
           </h4>
         </div>
-        <div className="blog-content animated fadeIn">{content}</div>
+        <div className="blog-content animated fadeIn">
+          {stringToHtml(content)}
+        </div>
       </div>
     </Container>
   );
