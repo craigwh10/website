@@ -29,7 +29,7 @@ export default () => {
               name="viewport"
               content="initial-scale=1.0, width=device-width"
             />
-            <link rel="shortcut icon" href="./favicon.png" />
+            <link rel="shortcut icon" href={`${process.env.URL}/favicon.png`} />
           </Head>
           <BlogPostLayout
             title={item.fields.Title}

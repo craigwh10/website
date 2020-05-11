@@ -13,5 +13,6 @@ module.exports = {
     spaceID: process.env.spaceID,
     accessToken: process.env.accessToken,
     USER: process.env.USER,
+    URL: process.env.URL,
   },
 };
