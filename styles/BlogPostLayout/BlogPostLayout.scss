@@ -60,6 +60,15 @@
   padding-left: 0.5em;
 }
 
+.blog-content h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+  @include themed() {
+    border-left: 1px solid t("blogHeader");
+  }
+}
+
 .blog-poster-img {
   width: 35px;
   height: 35px;
