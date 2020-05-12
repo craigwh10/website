@@ -65,8 +65,9 @@
   margin-bottom: 0rem;
   margin-top: 1rem;
   @include themed() {
-    border-left: 1px solid t("blogHeader");
+    border-left: 2px solid t("blogHeader");
   }
+  padding-left: 0.5em;
 }
 
 .blog-poster-img {
