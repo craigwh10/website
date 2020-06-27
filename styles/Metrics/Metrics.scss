@@ -1,0 +1,31 @@
+.scrollable {
+  overflow-y: hidden;
+}
+
+.metrics {
+  padding-top: 2rem;
+}
+
+@media (max-width: 1150px) {
+  .metrics {
+    -webkit-flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
+    display: flex;
+    overflow-y: hidden;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+  .scrollX {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  .bigMetric .metricAmmount {
+    display: none;
+  }
+}

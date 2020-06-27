@@ -1,0 +1,87 @@
+.blog-content {
+  @include themed() {
+    background: t("secondaryBackground");
+    color: t("textColorOnWhite");
+  }
+  min-height: 50vh;
+  padding: 1rem;
+}
+
+.blog-title {
+  padding-bottom: 0.5em;
+  @include themed() {
+    color: t("textColorOnWhite");
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.blog-content p {
+  white-space: break-spaces;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
+.blog-content h2 {
+  font-size: 1.5rem;
+  @include themed() {
+    background: t("blogHeaderSecondary");
+    color: t("blogHeaderSecondaryColor");
+  }
+  padding: 0.5em 0.3em;
+  margin-top: 1rem;
+}
+
+.blog-content ul {
+  margin-bottom: 0rem;
+}
+
+.blog-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+  display: inline-block;
+  @include themed() {
+    background: t("blogHeaderSecondary");
+    color: t("blogHeaderSecondaryColor");
+  }
+  padding: 0.5em 0.3em;
+  margin-bottom: 1em;
+}
+
+.blog-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+  @include themed() {
+    border-left: 3px solid t("blogHeader");
+  }
+  padding-left: 0.5em;
+}
+
+.blog-content h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+  @include themed() {
+    border-left: 2px solid t("blogHeader");
+  }
+  padding-left: 0.5em;
+}
+
+.blog-poster-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  @include themed() {
+    border: 2px solid t("secondaryBackground");
+  }
+  margin-right: 0.5rem;
+}
+
+.blog-title h4 {
+  @include themed() {
+    color: t("blogSecondaryText");
+  }
+}

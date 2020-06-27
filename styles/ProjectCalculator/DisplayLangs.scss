@@ -1,0 +1,86 @@
+@import "../colors.module.scss";
+@import "../../styles/color-themes";
+
+.gitMetric {
+  font-size: 0.8rem;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.metrics.row {
+  align-items: flex-end;
+}
+
+div.metricAmmount {
+  display: inline;
+  border-radius: 1em;
+  background: gray;
+  color: white;
+  margin-left: 0.5em;
+  padding: 0.2rem 0.3rem;
+}
+
+.bigMetric div.metricAmmount {
+  display: block;
+}
+
+.gitMetric span {
+  height: 2em;
+  margin-top: -1.5em;
+  @include themed() {
+    color: t("primaryText");
+  }
+  font-weight: 500;
+}
+@media (min-width: 950px) {
+  .metricName {
+    @include themed() {
+      color: t("textColor");
+    }
+    font-weight: 700;
+    font-size: 10px;
+    padding: 0.1rem 0rem;
+    margin: 0em -3em -2em -3em;
+  }
+}
+
+@media (max-width: 949px) {
+  .gitMetric span {
+    font-size: 0.75rem;
+    display: block;
+  }
+  .metricName {
+    font-size: 0.5rem;
+    padding: 0.1rem 1em;
+    @include themed() {
+      color: t("textColor");
+    }
+    margin: 0em -3em 0em -3em;
+    width: 3em;
+  }
+  .gitMetric {
+    flex: 0 0 auto;
+  }
+}
+
+.CentralGit {
+  align-items: center;
+  text-align: -webkit-center;
+}
+
+@for $i from 0 through 100 {
+  .height-#{$i} {
+    @if ($i > 5) {
+      .metricAmmount {
+        background: $mainorange !important;
+      }
+    }
+    @elseif ($i > 2 and $i <= 5) {
+      .metricAmmount {
+        background: $mainblue !important;
+      }
+    }
+  }
+}

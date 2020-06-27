@@ -1,0 +1,28 @@
+.recentblog {
+  background: white;
+  padding: 1rem;
+  @include themed() {
+    background: t("cardBackground");
+  }
+  margin-bottom: 0.5rem;
+}
+
+.conditionalrecentblog .recentblog {
+  @include themed() {
+    border-left: 10px solid t("secondaryBackground");
+  }
+}
+
+p.recentblog {
+  @include themed() {
+    color: t("recentBlogsText");
+  }
+}
+
+.recentblog p {
+  margin-bottom: 0rem !important;
+}
+
+.recentblog span {
+  display: block;
+}

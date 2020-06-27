@@ -1,0 +1,65 @@
+@import "./colors.module.scss";
+
+$themes: (
+  default: (
+    primaryBackground: $primary,
+    secondaryBackground: #f8f9fe,
+    secondaryBackgroundAccent: #e5e6ea,
+    dynamicNav: $footerlight,
+    heroHeader: $coolblue,
+    heroHeaderText: white,
+    blogHeaderSecondary: #2b324c,
+    blogHeaderSecondaryColor: white,
+    blogSecondaryText: #cacaca,
+    blogHeader: #2b324c,
+    footer: $primary,
+    cardBackground: $cardlight,
+    recentBlogsText: black,
+    importantContent: black,
+    textColor: $defaultfontcolor,
+    textColorOnWhite: #000,
+    logo: url("../public/logolight.png"),
+  ),
+  dark: (
+    primaryBackground: $primarydark,
+    secondaryBackground: #222527,
+    heroHeader: #074c3f,
+    dynamicNav: $footerdark,
+    heroHeaderText: white,
+    blogHeaderSecondary: #2d3033,
+    blogHeaderSecondaryColor: white,
+    blogHeader: white,
+    blogSecondaryText: #222527,
+    footer: $primarydark,
+    cardBackground: $carddark,
+    recentBlogsText: white,
+    importantContent: white,
+    importantSecondary: $mainorange,
+    textColor: #d2eeca,
+    textColorOnWhite: white,
+    logo: url("../public/dark.png"),
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
