@@ -13,14 +13,14 @@
   @include themed() {
     color: t("text");
   }
-}
-
-.text-left {
   text-align: left;
 }
 
-.text-right {
-  text-align: right;
+.metricTitleAccent {
+  @include themed() {
+    border-left: 0.5em solid t("primaryBackground");
+  }
+  padding-left: 2.2em;
 }
 
 .metricTitle h1 {
