@@ -27,16 +27,15 @@ function BlogPage() {
           <Row>
             <Col lg={12}>
               <div className="alert alert-success mt-3 mb-3" role="alert">
-                <p>
-                  I have also released my first{" "}
-                  <a
-                    href="https://medium.com/@craigwh10/creating-deploying-your-own-blogging-site-for-free-using-reactjs-contentful-nextjs-vercel-b415d01d37e8"
-                    target="_blank"
-                  >
-                    medium article
-                  </a>{" "}
-                  on how make your own blogging site 🎉.
-                </p>
+                I have also released my first{" "}
+                <a
+                  href="https://medium.com/@craigwh10/creating-deploying-your-own-blogging-site-for-free-using-reactjs-contentful-nextjs-vercel-b415d01d37e8"
+                  target="_blank"
+                >
+                  medium article
+                </a>{" "}
+                on how you can make your own blogging site similar to this one
+                🎉.
               </div>
             </Col>
           </Row>
