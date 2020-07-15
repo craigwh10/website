@@ -12,7 +12,6 @@ export default () => {
 
   const blog = posts.filter((item) => item.fields.Title == router.query.id);
 
-  console.log(blog);
   return (
     blog &&
     blog.map((item) => {

@@ -1,10 +1,10 @@
 .recentblog {
-  background: white;
   padding: 1rem;
   @include themed() {
     background: t("cardBackground");
   }
   margin-bottom: 0.5rem;
+  border-radius: 1em;
 }
 
 .conditionalrecentblog .recentblog {
