@@ -10,10 +10,17 @@
 }
 
 .metricTitle {
-  text-align: center;
   @include themed() {
     color: t("text");
   }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .metricTitle h1 {

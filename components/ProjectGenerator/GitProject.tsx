@@ -14,7 +14,7 @@ const GitProject: React.SFC<types.Project> = ({
   updated_at,
 }) => {
   return (
-    <Col md={12} xs={12} className={"GitProject animated flipInX"}>
+    <Col md={12} xs={12} className={"GitProject animated fadeIn"}>
       <a className="GitProject" href={html_url} target="_blank">
         <div className="GitProject-title">
           {name} <span className={language}>{language}</span>

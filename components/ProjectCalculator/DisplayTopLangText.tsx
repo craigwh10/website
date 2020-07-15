@@ -27,12 +27,12 @@ const DisplayTopLangText: React.SFC = () => {
     gitLangFreq && (
       <>
         <Col>
-          <div className="metricTitle hero animated fadeInLeft">
+          <div className="metricTitle hero animated fadeInLeft text-left">
             <h1>{`I enjoy making stuff with ${primaryLanguage} & ${otherLanguages} other languages.`}</h1>
           </div>
         </Col>
         <Col>
-          <div className="metricTitle hero animated fadeInRight">
+          <div className="metricTitle hero animated fadeInRight text-right">
             <p>
               {`My name's `}
               <a
