@@ -25,26 +25,32 @@ const DisplayTopLangText: React.SFC = () => {
 
   return (
     gitLangFreq && (
-      <Col>
-        <div className="metricTitle hero animated fadeIn">
-          <h1>{`I enjoy making stuff with ${primaryLanguage} & ${otherLanguages} other languages.`}</h1>
-          <p>
-            {`My name's `}
-            <a
-              href="https://www.linkedin.com/in/craig-white98/"
-              target="_blank"
-            >
-              Craig
-            </a>
-            {`, and I'm an Associate at AND Digital.`}
-            <br />
-            {`I enjoy creating digital products, whether it be the analysis or development of them.`}
-          </p>
-          <p>
-            {`So far I've been involved with around ${totalLang} personal projects, and 6 professional projects.`}
-          </p>
-        </div>
-      </Col>
+      <>
+        <Col>
+          <div className="metricTitle hero animated fadeInLeft">
+            <h1>{`I enjoy making stuff with ${primaryLanguage} & ${otherLanguages} other languages.`}</h1>
+          </div>
+        </Col>
+        <Col>
+          <div className="metricTitle hero animated fadeInRight">
+            <p>
+              {`My name's `}
+              <a
+                href="https://www.linkedin.com/in/craig-white98/"
+                target="_blank"
+              >
+                Craig
+              </a>
+              {`, and I'm an Associate at AND Digital.`}
+              <br />
+              {`I enjoy creating digital products, whether it be the analysis or development of them.`}
+            </p>
+            <p>
+              {`So far I've been involved with around ${totalLang} personal projects, and 6 professional projects.`}
+            </p>
+          </div>
+        </Col>
+      </>
     )
   );
 };

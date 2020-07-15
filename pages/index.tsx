@@ -19,7 +19,7 @@ const IndexPage: NextPage<Props, InitialProps> = () => {
         <meta name="author" content="Craig White" />
         <meta
           name="description"
-          content="I'm a 21 year old associate working for AND Digital who just enjoys making stuff, hopefully the content on here can help you make stuff too."
+          content="I'm a 22 year old associate working for AND Digital who just enjoys making stuff, hopefully the content on here can help you make stuff too."
         />
         <meta
           name="keywords"
