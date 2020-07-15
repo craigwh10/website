@@ -41,7 +41,7 @@ const DisplayTopLangText: React.SFC = () => {
             {`I enjoy creating digital products, whether it be the analysis or development of them.`}
           </p>
           <p>
-            {`So far I've been involved with around ${totalLang} personal projects, and 5 professional projects.`}
+            {`So far I've been involved with around ${totalLang} personal projects, and 6 professional projects.`}
           </p>
         </div>
       </Col>
