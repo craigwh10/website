@@ -34,7 +34,7 @@ const DisplayLangs: React.SFC = () => {
         <Row
           className={
             "metrics " +
-            (langLength > 4 ? "ScrollX bigMetric" : "noScrollX smallMetric")
+            (langLength > 6 ? "ScrollX bigMetric" : "noScrollX smallMetric")
           }
           noGutters
         >
