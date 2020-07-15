@@ -26,7 +26,7 @@ function BlogPage() {
         <Container>
           <Row>
             <Col lg={12}>
-              <div className="alert alert-success mt-3 mb-3" role="alert">
+              <div className="alert alert-success mt-3 mb-0" role="alert">
                 I have also released my first{" "}
                 <a
                   href="https://medium.com/@craigwh10/creating-deploying-your-own-blogging-site-for-free-using-reactjs-contentful-nextjs-vercel-b415d01d37e8"

@@ -43,6 +43,7 @@ const DisplayTopLangText: React.SFC = () => {
               </a>
               {`, and I'm an Associate at AND Digital.`}
               <br />
+              <br />
               {`I enjoy creating digital products, whether it be the analysis or development of them.`}
             </p>
             <p>
