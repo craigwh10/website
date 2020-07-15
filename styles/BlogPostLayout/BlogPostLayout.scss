@@ -21,6 +21,11 @@
   white-space: break-spaces;
   font-size: 1rem;
   margin-bottom: 0rem;
+  padding: 0em 1.5em;
+}
+
+.blog-content .alert {
+  margin: 0em 1em;
 }
 
 .blog-content h2 {
@@ -61,6 +66,7 @@
     border-left: 3px solid t("blogHeader");
   }
   padding-left: 0.5em;
+  margin-left: 1em;
 }
 
 .blog-content h5 {
