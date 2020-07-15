@@ -1,5 +1,6 @@
 @import "./color-themes";
 @import "./colors.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 header .heroHeader {
   min-height: 8vh;
@@ -40,4 +41,19 @@ footer .footer {
 
 .hero {
   margin: 2em 0em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label,
+div,
+body,
+span,
+a,
+html {
+  font-family: "Varela Round", sans-serif;
 }
