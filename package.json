@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "contentful": "^7.14.4",
     "next": "^9.3.6",
